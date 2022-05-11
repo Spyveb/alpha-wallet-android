@@ -66,7 +66,7 @@ import static com.alphawallet.token.tools.Convert.getEthString;
 import dagger.hilt.android.AndroidEntryPoint;
 
 /**
- * Created by James on 21/02/2018.
+ * Created by Dhaval on 21/02/2018.
  */
 @AndroidEntryPoint
 public class SellDetailActivity extends BaseActivity implements TokensAdapterCallback, Runnable, SignAuthenticationCallback

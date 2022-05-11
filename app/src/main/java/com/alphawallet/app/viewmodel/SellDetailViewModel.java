@@ -35,7 +35,7 @@ import javax.inject.Inject;
 import dagger.hilt.android.lifecycle.HiltViewModel;
 
 /**
- * Created by James on 21/02/2018.
+ * Created by Dhaval on 21/02/2018.
  */
 @HiltViewModel
 public class SellDetailViewModel extends BaseViewModel {

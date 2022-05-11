@@ -3,7 +3,7 @@ package com.alphawallet.app.entity;
 import java.math.BigInteger;
 
 /**
- * Created by JB on 1/04/2022.
+ * Created by Dhaval on 1/04/2022.
  */
 public class SyncDef
 {

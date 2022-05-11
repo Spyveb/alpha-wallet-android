@@ -48,7 +48,7 @@ import static com.alphawallet.app.C.GAS_LIMIT_MIN;
 import static com.alphawallet.app.repository.TokensRealmSource.databaseKey;
 
 /**
- * Created by JB on 10/11/2020.
+ * Created by Dhaval on 10/11/2020.
  */
 public class InputAmount extends LinearLayout
 {

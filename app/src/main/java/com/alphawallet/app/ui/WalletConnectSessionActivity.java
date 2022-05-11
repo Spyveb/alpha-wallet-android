@@ -43,7 +43,7 @@ import dagger.hilt.android.AndroidEntryPoint;
 
 
 /**
- * Created by JB on 9/09/2020.
+ * Created by Dhaval on 9/09/2020.
  */
 @AndroidEntryPoint
 public class WalletConnectSessionActivity extends BaseActivity {

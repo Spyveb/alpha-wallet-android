@@ -1,8 +1,7 @@
 package com.alphawallet.token.entity;
 
 /**
- * Created by James on 23/05/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 23/05/2019.
  */
 public class TokenscriptContext
 {

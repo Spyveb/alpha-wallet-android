@@ -9,7 +9,7 @@ import com.alphawallet.app.entity.tokens.Token;
 import com.alphawallet.app.entity.Wallet;
 
 /**
- * Created by James on 22/02/2018.
+ * Created by Dhaval on 22/02/2018.
  */
 
 public class SellDetailRouter {

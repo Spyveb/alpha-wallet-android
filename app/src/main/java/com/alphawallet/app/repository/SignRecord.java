@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import com.alphawallet.app.repository.entity.RealmWCSignElement;
 
 /**
- * Created by JB on 9/09/2020.
+ * Created by Dhaval on 9/09/2020.
  */
 public class SignRecord implements Parcelable
 {

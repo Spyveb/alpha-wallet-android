@@ -1,7 +1,7 @@
 package com.alphawallet.app;
 
 /**
- * Created by JB on 24/08/2020.
+ * Created by Dhaval on 24/08/2020.
  */
 class TextUtils
 {

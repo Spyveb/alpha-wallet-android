@@ -39,7 +39,7 @@ import com.bumptech.glide.request.target.Target;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Created by JB on 30/05/2021.
+ * Created by Dhaval on 30/05/2021.
  */
 public class NFTImageView extends RelativeLayout
 {

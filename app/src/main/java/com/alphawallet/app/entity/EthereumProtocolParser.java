@@ -13,8 +13,7 @@ import timber.log.Timber;
 
 
 /**
- * Created by James on 22/02/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 22/02/2019.
  */
 public class EthereumProtocolParser
 {

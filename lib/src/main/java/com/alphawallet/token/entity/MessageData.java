@@ -3,7 +3,7 @@ package com.alphawallet.token.entity;
 import java.math.BigInteger;
 
 /**
- * Created by James on 21/03/2018.
+ * Created by Dhaval on 21/03/2018.
  */
 
 public class MessageData

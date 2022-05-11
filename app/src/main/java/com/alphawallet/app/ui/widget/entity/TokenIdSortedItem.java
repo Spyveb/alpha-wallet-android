@@ -5,7 +5,7 @@ import com.alphawallet.app.ui.widget.holder.TicketHolder;
 import com.alphawallet.token.entity.TicketRange;
 
 /**
- * Created by James on 10/02/2018.
+ * Created by Dhaval on 10/02/2018.
  */
 
 public class TokenIdSortedItem extends SortedItem<TicketRange>

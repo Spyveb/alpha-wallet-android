@@ -5,14 +5,16 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    android:background="@color/back">
 
     <include layout="@layout/layout_simple_toolbar" />
 
     <View
         android:id="@+id/separator"
         style="@style/Aw.Component.Separator"
-        android:layout_below="@id/toolbar" />
+        android:layout_below="@id/toolbar"
+        android:visibility="gone"/>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -37,7 +39,7 @@
                 android:id="@+id/main_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background_bottom_border" />
+                android:background="@color/back" />
 
             <com.alphawallet.app.widget.StandardHeader
                 android:id="@+id/testnet_header"
@@ -50,7 +52,7 @@
                 android:id="@+id/test_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background_bottom_border"
+                android:background="@color/back"
                 android:visibility="gone" />
 
         </LinearLayout>

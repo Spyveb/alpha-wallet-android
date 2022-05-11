@@ -3,7 +3,7 @@ package com.alphawallet.app.entity;
 import java.util.UUID;
 
 /**
- * Created by JB on 7/07/2020.
+ * Created by Dhaval on 7/07/2020.
  */
 public class EventMeta extends ActivityMeta
 {

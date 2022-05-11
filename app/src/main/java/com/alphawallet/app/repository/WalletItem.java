@@ -1,7 +1,7 @@
 package com.alphawallet.app.repository;
 
 /**
- * Created by JB on 29/03/2022.
+ * Created by Dhaval on 29/03/2022.
  */
 
 public enum WalletItem

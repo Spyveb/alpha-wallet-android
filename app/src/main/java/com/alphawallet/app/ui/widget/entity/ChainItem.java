@@ -5,7 +5,7 @@ import com.alphawallet.app.ui.widget.holder.ChainNameHeaderHolder;
 import com.alphawallet.app.ui.widget.holder.HeaderHolder;
 
 /**
- * Created by JB on 10/01/2022.
+ * Created by Dhaval on 10/01/2022.
  */
 public class ChainItem extends SortedItem<Long> {
 

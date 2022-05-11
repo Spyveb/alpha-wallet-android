@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,7 @@ import androidx.preference.PreferenceManager;
 import com.alphawallet.app.C;
 import com.alphawallet.app.R;
 import com.alphawallet.app.ui.BaseActivity;
+import com.alphawallet.app.ui.ImportWalletActivity;
 import com.alphawallet.app.ui.WalletConnectActivity;
 import com.alphawallet.app.widget.AWalletAlertDialog;
 import com.google.zxing.BarcodeFormat;
@@ -48,6 +51,8 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -79,6 +84,8 @@ public class QRScanner extends BaseActivity
     public static final int RC_HANDLE_IMAGE_PICKUP = 3;
     public static final int DENY_PERMISSION = 1;
     public static final int WALLET_CONNECT = 2;
+    public static String qrResult;
+    private ImageView imgBack,imgFlash,imgAR,imgbrowse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -116,13 +123,19 @@ public class QRScanner extends BaseActivity
         barcodeView.decodeContinuous(callback);
         barcodeView.setStatusText("");
 
+
         beepManager = new BeepManager(this);
 
         flashButton = findViewById(R.id.flash_button);
         myAddressButton = findViewById(R.id.my_address_button);
         browseButton = findViewById(R.id.browse_button);
 
-        setupToolbar();
+        imgBack = findViewById(R.id.imgBack);
+        imgFlash = findViewById(R.id.imgFlash);
+        imgAR = findViewById(R.id.imgAR);
+        imgbrowse = findViewById(R.id.imgbrowse);
+
+       // setupToolbar();
 
         setupButtons();
     }
@@ -174,6 +187,54 @@ public class QRScanner extends BaseActivity
                 pickImage();
             }
         });
+
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+        imgFlash.setOnClickListener(view -> {
+            try
+            {
+                if (!torchOn)
+                {
+                    //flashButton.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_flash_off, 0,0);
+                    // imgFlash.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_flash, 0,0);
+                    barcodeView.setTorchOn();
+                }
+                else
+                {
+                    // flashButton.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_flash, 0,0);
+                    barcodeView.setTorchOff();
+                }
+                torchOn = !torchOn;
+            }
+            catch (Exception e)
+            {
+                onError(e);
+            }
+        });
+
+        myAddressButton.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.putExtra(C.EXTRA_ACTION_NAME, C.ACTION_MY_ADDRESS_SCREEN);
+            setResult(Activity.RESULT_OK, intent);
+            finish();
+        });
+
+        imgbrowse.setOnClickListener(view -> {
+            if (ActivityCompat.checkSelfPermission(this, READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+            {
+                String[] permissions = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE};
+                requestPermissions(permissions, RC_HANDLE_IMAGE_PICKUP);
+            }
+            else
+            {
+                pickImage();
+            }
+        });
+
     }
 
     @Override
@@ -198,6 +259,7 @@ public class QRScanner extends BaseActivity
                 // Prevent duplicate scans
                 return;
             }
+            qrResult = result.getText();
 
             lastText = result.getText();
             barcodeView.setStatusText(result.getText());
@@ -393,12 +455,25 @@ public class QRScanner extends BaseActivity
         {
             startWalletConnect(qrCode);
         }
-        else
-        {
-            Intent intent = new Intent();
-            intent.putExtra(C.EXTRA_QR_CODE, qrCode);
-            setResult(Activity.RESULT_OK, intent);
-            finish();
+        else {
+            final Pattern findKey = Pattern.compile("($|\\s?|0x?)([0-9a-fA-F]{64})($|\\s?)");
+
+            final Matcher privateKeyMatch = findKey.matcher(qrResult);
+            if (privateKeyMatch.find()) {
+
+                Intent intent = new Intent(this, ImportWalletActivity.class);
+                intent.putExtra("isQRScanner", true);
+                this.startActivity(intent);
+                finish();
+
+            }else {
+
+                Intent intent = new Intent();
+                intent.putExtra(C.EXTRA_QR_CODE, qrCode);
+                setResult(Activity.RESULT_OK, intent);
+                finish();
+
+            }
         }
     }
 

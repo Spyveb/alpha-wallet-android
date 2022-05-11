@@ -10,7 +10,7 @@ import java.util.List;
 import com.alphawallet.token.entity.TicketRange;
 
 /**
- * Created by James on 10/02/2018.
+ * Created by Dhaval on 10/02/2018.
  */
 
 /**

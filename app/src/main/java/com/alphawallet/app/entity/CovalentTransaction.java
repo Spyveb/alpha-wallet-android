@@ -21,7 +21,7 @@ import static com.alphawallet.app.repository.TokenRepository.getWeb3jService;
 import android.text.TextUtils;
 
 /**
- * Created by JB on 17/05/2021.
+ * Created by Dhaval on 17/05/2021.
  */
 public class CovalentTransaction
 {

@@ -53,7 +53,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by James on 21/02/2018.
+ * Created by Dhaval on 21/02/2018.
  */
 @HiltViewModel
 public class TransferTicketDetailViewModel extends BaseViewModel {

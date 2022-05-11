@@ -1,7 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by JB on 11/10/2021.
+ * Created by Dhaval on 11/10/2021.
  */
 public enum AddressMode
 {

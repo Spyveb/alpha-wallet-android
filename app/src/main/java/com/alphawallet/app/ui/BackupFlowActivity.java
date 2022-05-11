@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +46,7 @@ public class BackupFlowActivity extends BaseActivity implements
     private ImageView backupImage;
     private AWalletAlertDialog alertDialog;
     private FunctionButtonBar functionButtonBar;
+    private Button btnMywallet;
     private BackupOperationType type;
     private boolean launchedBackup;
 
@@ -93,21 +95,27 @@ public class BackupFlowActivity extends BaseActivity implements
         setContentView(R.layout.activity_backup);
         initViews();
         title.setText(R.string.backup_seed_phrase);
-        backupImage.setImageResource(R.drawable.seed);
+        backupImage.setImageResource(R.drawable.ic_phrase);
         detail.setText(R.string.backup_seed_phrase_detail);
         functionButtonBar.setPrimaryButtonText(R.string.action_back_up_my_wallet);
         functionButtonBar.setPrimaryButtonClickListener(this);
+
+        btnMywallet.setText(R.string.action_back_up_my_wallet);
+        btnMywallet.setOnClickListener(this);
     }
 
     private void setupJSONExport() {
         setContentView(R.layout.activity_backup);
         initViews();
         title.setText(R.string.what_is_keystore_json);
-        backupImage.setImageResource(R.drawable.ic_keystore);
+        backupImage.setImageResource(R.drawable.ic_keys);
         detail.setText(R.string.keystore_detail_text);
         state = ENTER_JSON_BACKUP;
         functionButtonBar.setPrimaryButtonText(R.string.export_keystore_json);
         functionButtonBar.setPrimaryButtonClickListener(this);
+
+        btnMywallet.setText(R.string.export_keystore_json);
+        btnMywallet.setOnClickListener(this);
     }
 
     @Override
@@ -148,6 +156,7 @@ public class BackupFlowActivity extends BaseActivity implements
         layoutWordHolder = findViewById(R.id.layout_word_holder);
         backupImage = findViewById(R.id.backup_seed_image);
         functionButtonBar = findViewById(R.id.layoutButtons);
+        btnMywallet = findViewById(R.id.btnMywallet);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         toolbar();
         setTitle(getString(R.string.empty));

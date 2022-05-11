@@ -12,7 +12,7 @@ import java.math.BigInteger;
 import timber.log.Timber;
 
 /**
- * Created by JB on 28/07/21
+ * Created by Dhaval on 28/07/21
  */
 
 public class WalletAddEthereumChainObject implements Parcelable

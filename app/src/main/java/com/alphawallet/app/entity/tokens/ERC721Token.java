@@ -57,8 +57,7 @@ import io.realm.Realm;
 import timber.log.Timber;
 
 /**
- * Created by James on 3/10/2018.
- * Stormbird in Singapore
+ * Created by Dhaval on 3/10/2018.
  */
 public class ERC721Token extends Token
 {

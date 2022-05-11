@@ -27,7 +27,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by James on 27/01/2018.  It might seem counter intuitive
+ * Created by Dhaval on 27/01/2018.  It might seem counter intuitive
  * but here Ticket refers to a container of an asset class here, not
  * the right to seat somewhere in the venue. Therefore, there
  * shouldn't be List<Ticket> To understand this, imagine that one says

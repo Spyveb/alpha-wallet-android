@@ -90,7 +90,7 @@ import timber.log.Timber;
 
 
 /**
- * Created by JB on 6/08/2020.
+ * Created by Dhaval on 6/08/2020.
  */
 @AndroidEntryPoint
 public class TokenActivity extends BaseActivity implements PageReadyCallback, StandardFunctionInterface, ActionSheetCallback,

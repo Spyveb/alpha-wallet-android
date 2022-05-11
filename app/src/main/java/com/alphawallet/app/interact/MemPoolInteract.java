@@ -7,7 +7,7 @@ import io.reactivex.Observable;
 import com.alphawallet.app.entity.TransferFromEventResponse;
 
 /**
- * Created by James on 1/02/2018.
+ * Created by Dhaval on 1/02/2018.
  */
 
 public class MemPoolInteract

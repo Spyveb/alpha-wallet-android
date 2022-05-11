@@ -28,7 +28,7 @@ import java.util.Map;
 import io.reactivex.disposables.Disposable;
 
 /**
- * Created by JB on 1/07/2021.
+ * Created by Dhaval on 1/07/2021.
  */
 public class NFTAsset implements Parcelable
 {

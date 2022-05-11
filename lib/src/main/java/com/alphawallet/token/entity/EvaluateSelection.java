@@ -3,7 +3,7 @@ package com.alphawallet.token.entity;
 import java.util.Map;
 
 /**
- * Created by JB on 23/05/2020.
+ * Created by Dhaval on 23/05/2020.
  */
 public abstract class EvaluateSelection
 {

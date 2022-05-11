@@ -4,6 +4,7 @@ package com.alphawallet.app.ui;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
@@ -28,6 +29,7 @@ public class NameThisWalletActivity extends BaseActivity implements StandardFunc
 
     private FunctionButtonBar functionBar;
     private InputView inputName;
+    private EditText etWalletName;
 
     @Nullable
     private Disposable disposable;
@@ -45,8 +47,20 @@ public class NameThisWalletActivity extends BaseActivity implements StandardFunc
         functionBar = findViewById(R.id.layoutButtons);
         functionBar.setupFunctions(this, new ArrayList<>(Collections.singletonList(R.string.action_save_name)));
         functionBar.revealButtons();
+        etWalletName = findViewById(R.id.etWalletName);
 
         inputName = findViewById(R.id.input_name);
+
+        etWalletName.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                    updateNameAndExit();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         inputName.getEditText().setOnKeyListener((v, keyCode, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER)
@@ -65,12 +79,12 @@ public class NameThisWalletActivity extends BaseActivity implements StandardFunc
 
     public void onENSSuccess(String resolvedAddress)
     {
-        inputName.getEditText().setHint(resolvedAddress);
+        etWalletName.setHint(resolvedAddress);
     }
 
     private void onDefaultWallet(Wallet wallet)
     {
-        inputName.setText(wallet.name);
+        etWalletName.setText(wallet.name);
     }
 
     public void handleClick(String action, int actionId)
@@ -80,7 +94,7 @@ public class NameThisWalletActivity extends BaseActivity implements StandardFunc
 
     private void updateNameAndExit()
     {
-        viewModel.setWalletName(inputName.getText().toString(), this::checkENSName);
+        viewModel.setWalletName(etWalletName.getText().toString(), this::finish);
     }
 
     private void checkENSName()

@@ -6,7 +6,7 @@ import com.alphawallet.app.util.LocaleUtils;
 import java.util.Date;
 
 /**
- * Created by JB on 10/08/2020.
+ * Created by Dhaval on 10/08/2020.
  */
 public class LabelSortedItem extends TimestampSortedItem<Date>
 {

@@ -13,8 +13,7 @@ import com.alphawallet.app.entity.WalletPage;
 import com.alphawallet.app.util.Utils;
 
 /**
- * Created by James on 8/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 8/07/2019.
  */
 public class ScrollControlViewPager extends ViewPager
 {

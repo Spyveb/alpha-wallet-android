@@ -146,7 +146,6 @@ public class NFTAssetsFragment extends BaseFragment implements OnAssetClickListe
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         recyclerView.removeItemDecoration(listItemDecoration);
         recyclerView.addItemDecoration(gridItemDecoration);
-        recyclerView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.surface));
         initAndAttachAdapter(true);
     }
 
@@ -155,7 +154,6 @@ public class NFTAssetsFragment extends BaseFragment implements OnAssetClickListe
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.removeItemDecoration(gridItemDecoration);
         recyclerView.addItemDecoration(listItemDecoration);
-        recyclerView.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.background_bottom_border));
         recyclerView.setPadding(0, 0, 0, 0);
         initAndAttachAdapter(false);
     }

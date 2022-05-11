@@ -3,7 +3,7 @@ package com.alphawallet.app.util.das;
 import android.text.TextUtils;
 
 /**
- * Created by JB on 17/09/2021.
+ * Created by Dhaval on 17/09/2021.
  */
 public class DASAccount
 {

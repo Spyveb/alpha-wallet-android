@@ -11,7 +11,7 @@ import com.alphawallet.app.R;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
 /**
- * Created by JB on 26/08/2021.
+ * Created by Dhaval on 26/08/2021.
  */
 public class StandardHeader extends LinearLayout
 {

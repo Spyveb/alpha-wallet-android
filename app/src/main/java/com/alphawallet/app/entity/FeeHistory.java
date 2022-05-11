@@ -1,7 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by JB on 18/12/2021.
+ * Created by Dhaval on 18/12/2021.
  */
 public class FeeHistory
 {

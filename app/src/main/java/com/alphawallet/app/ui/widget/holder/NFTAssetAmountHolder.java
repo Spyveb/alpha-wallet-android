@@ -15,7 +15,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.DrawableImageViewTarget;
 
 /**
- * Created by JB on 22/08/2021.
+ * Created by Dhaval on 22/08/2021.
  */
 public class NFTAssetAmountHolder extends BinderViewHolder<NFTAsset>
 {

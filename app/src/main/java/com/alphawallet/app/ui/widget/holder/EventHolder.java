@@ -42,7 +42,7 @@ import static com.alphawallet.app.ui.widget.holder.TransactionHolder.DEFAULT_ADD
 import static com.alphawallet.ethereum.EthereumNetworkBase.MAINNET_ID;
 
 /**
- * Created by JB on 28/07/2020.
+ * Created by Dhaval on 28/07/2020.
  */
 public class EventHolder extends BinderViewHolder<EventMeta> implements View.OnClickListener
 {

@@ -21,7 +21,7 @@ import com.alphawallet.app.util.KeyboardUtils;
 import org.jetbrains.annotations.Contract;
 
 /**
- * Created by JB on 9/12/2021.
+ * Created by Dhaval on 9/12/2021.
  */
 public class SearchToolbar extends FrameLayout implements Runnable
 {

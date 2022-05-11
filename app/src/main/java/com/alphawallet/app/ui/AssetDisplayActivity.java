@@ -58,7 +58,7 @@ import static com.alphawallet.app.C.Key.WALLET;
 import static com.alphawallet.app.widget.AWalletAlertDialog.WARNING;
 
 /**
- * Created by James on 22/01/2018.
+ * Created by Dhaval on 22/01/2018.
  */
 
 /**

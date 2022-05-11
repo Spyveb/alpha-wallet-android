@@ -2,7 +2,7 @@ package com.alphawallet.app.walletconnect.entity;
 import com.alphawallet.app.walletconnect.WCClient;
 
 /**
- * Created by JB on 6/10/2021.
+ * Created by Dhaval on 6/10/2021.
  */
 public interface GetClientCallback
 {

@@ -272,11 +272,11 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
         double percentage = 0;
         try {
             percentage = Double.parseDouble(ticker.percentChange24h);
-            color = ContextCompat.getColor(getContext(), percentage < 0 ? R.color.negative : R.color.positive);
+           // color = ContextCompat.getColor(getContext(), percentage < 0 ? R.color.negative : R.color.positive);
             formattedPercents = ticker.percentChange24h.replace("-", "") + "%";
-            root24Hours.setBackgroundResource(percentage < 0 ? R.drawable.background_24h_change_red : R.drawable.background_24h_change_green);
+          //  root24Hours.setBackgroundResource(percentage < 0 ? R.drawable.background_24h_change_red : R.drawable.background_24h_change_green);
             text24Hours.setText(formattedPercents);
-            text24Hours.setTextColor(color);
+          //  text24Hours.setTextColor(color);
             image24h.setImageResource(percentage < 0 ? R.drawable.ic_price_down : R.drawable.ic_price_up);
         } catch (Exception ex) { /* Quietly */ }
 
@@ -285,7 +285,7 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
                 new BigDecimal(ticker.percentChange24h)).divide(new BigDecimal(100)));
         String formattedValue =  TickerService.getCurrencyString(currencyChange.doubleValue());
         
-        this.textAppreciation.setTextColor(color);
+        //this.textAppreciation.setTextColor(color);
         this.textAppreciation.setText(formattedValue);
     }
 

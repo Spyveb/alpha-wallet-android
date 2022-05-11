@@ -1,7 +1,7 @@
 package com.alphawallet.app.entity.walletconnect;
 
 /**
- * Created by JB on 10/09/2020.
+ * Created by Dhaval on 10/09/2020.
  */
 public enum SignType
 {

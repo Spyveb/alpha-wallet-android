@@ -1,7 +1,7 @@
 package com.alphawallet.token.entity;
 
 /**
- * Created by JB on 21/05/2020.
+ * Created by Dhaval on 21/05/2020.
  */
 public enum FilterType
 {

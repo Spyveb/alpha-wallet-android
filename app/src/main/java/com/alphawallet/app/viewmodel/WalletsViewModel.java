@@ -1,16 +1,24 @@
 package com.alphawallet.app.viewmodel;
 
+import static com.alphawallet.app.C.EXTRA_ADDRESS;
 import static com.alphawallet.app.entity.tokenscript.TokenscriptFunction.ZERO_ADDRESS;
+import static com.alphawallet.app.widget.CopyTextView.KEY_ADDRESS;
 import static com.alphawallet.ethereum.EthereumNetworkBase.MAINNET_ID;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.alphawallet.app.C;
+import com.alphawallet.app.R;
 import com.alphawallet.app.entity.CreateWalletCallbackInterface;
 import com.alphawallet.app.entity.ErrorEnvelope;
 import com.alphawallet.app.entity.NetworkInfo;
@@ -33,7 +41,15 @@ import com.alphawallet.app.service.AssetDefinitionService;
 import com.alphawallet.app.service.KeyService;
 import com.alphawallet.app.service.TickerService;
 import com.alphawallet.app.service.TokensService;
+import com.alphawallet.app.ui.MyAddressActivity;
+import com.alphawallet.app.ui.NameThisWalletActivity;
+import com.alphawallet.app.ui.TokenManagementActivity;
 import com.alphawallet.app.util.AWEnsResolver;
+import com.alphawallet.app.widget.WalletFragmentActionsView;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
+import org.web3j.crypto.Keys;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -87,6 +103,7 @@ public class WalletsViewModel extends BaseViewModel implements ServiceSyncCallba
     private final Map<String, Wallet> walletUpdate = new ConcurrentHashMap<>();
     private final Map<String, Disposable> currentWalletUpdates = new ConcurrentHashMap<>();
     private SyncCallback syncCallback;
+    private BottomSheetDialog dialog;
 
     @Nullable
     private Disposable balanceTimerDisposable;
@@ -168,7 +185,47 @@ public class WalletsViewModel extends BaseViewModel implements ServiceSyncCallba
 
         startWalletUpdate();
     }
+    public void showMyAddress(Context context, Wallet selectedWallet)
+    {
+        // show bottomsheet dialog
+        WalletFragmentActionsView actionsView = new WalletFragmentActionsView(context);
+        actionsView.setOnCopyWalletAddressClickListener(v -> {
+            dialog.dismiss();
+            ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText(KEY_ADDRESS, Keys.toChecksumAddress(selectedWallet.address));
+            if (clipboard != null) {
+                clipboard.setPrimaryClip(clip);
+            }
 
+            Toast.makeText(context, R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show();
+        });
+        actionsView.setOnShowMyWalletAddressClickListener(v -> {
+            dialog.dismiss();
+            Intent intent = new Intent(context, MyAddressActivity.class);
+            intent.putExtra(C.Key.WALLET, defaultWallet.getValue());
+            intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+            context.startActivity(intent);
+        });
+        actionsView.setOnAddHideTokensClickListener(v -> {
+            dialog.dismiss();
+            Intent intent = new Intent(context, TokenManagementActivity.class);
+            intent.putExtra(EXTRA_ADDRESS, selectedWallet);
+            context.startActivity(intent);
+        });
+        actionsView.setOnRenameThisWalletClickListener(v -> {
+            dialog.dismiss();
+            Intent intent = new Intent(context, NameThisWalletActivity.class);
+            context.startActivity(intent);
+        });
+
+        dialog = new BottomSheetDialog(context);
+        dialog.setContentView(actionsView);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        BottomSheetBehavior<?> behavior = BottomSheetBehavior.from((View) actionsView.getParent());
+        dialog.setOnShowListener(dialog -> behavior.setPeekHeight(actionsView.getHeight()));
+        dialog.show();
+    }
     private void startWalletUpdate()
     {
         walletBalances.clear();

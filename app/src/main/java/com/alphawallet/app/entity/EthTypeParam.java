@@ -3,8 +3,7 @@ package com.alphawallet.app.entity;
 import java.math.BigDecimal;
 
 /**
- * Created by James on 23/02/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 23/02/2019.
  */
 public class EthTypeParam
 {

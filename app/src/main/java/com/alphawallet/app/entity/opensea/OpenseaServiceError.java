@@ -3,8 +3,7 @@ package com.alphawallet.app.entity.opensea;
 import com.alphawallet.app.entity.ErrorEnvelope;
 
 /**
- * Created by James on 20/12/2018.
- * Stormbird in Singapore
+ * Created by Dhaval on 20/12/2018.
  */
 
 public class OpenseaServiceError extends Exception {

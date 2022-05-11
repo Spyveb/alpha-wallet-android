@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by James on 28/05/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 28/05/2019.
  */
 public class EthereumTransaction
 {

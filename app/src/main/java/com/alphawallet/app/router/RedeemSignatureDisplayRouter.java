@@ -10,7 +10,7 @@ import com.alphawallet.app.entity.tokens.Token;
 import com.alphawallet.app.entity.Wallet;
 
 /**
- * Created by James on 25/01/2018.
+ * Created by Dhaval on 25/01/2018.
  */
 
 public class RedeemSignatureDisplayRouter {

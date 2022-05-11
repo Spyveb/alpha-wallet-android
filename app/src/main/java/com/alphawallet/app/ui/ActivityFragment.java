@@ -43,7 +43,7 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 
 /**
- * Created by JB on 26/06/2020.
+ * Created by Dhaval on 26/06/2020.
  */
 @AndroidEntryPoint
 public class ActivityFragment extends BaseFragment implements View.OnClickListener, ActivityDataInteract
@@ -186,7 +186,7 @@ public class ActivityFragment extends BaseFragment implements View.OnClickListen
         listView = view.findViewById(R.id.list);
         listView.setLayoutManager(new LinearLayoutManager(getContext()));
         listView.setAdapter(adapter);
-        listView.addItemDecoration(new ListDivider(getContext()));
+     //   listView.addItemDecoration(new ListDivider(getContext()));
         listView.addRecyclerListener(holder -> adapter.onRViewRecycled(holder));
 
         systemView.attachRecyclerView(listView);

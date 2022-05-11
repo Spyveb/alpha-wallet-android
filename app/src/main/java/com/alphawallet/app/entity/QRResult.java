@@ -8,8 +8,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 /**
- * Created by James on 23/02/2019.
- * Stormbird in Singapore
+ * Created by DHaval on 23/02/2019.
  */
 
 public class QRResult implements Parcelable

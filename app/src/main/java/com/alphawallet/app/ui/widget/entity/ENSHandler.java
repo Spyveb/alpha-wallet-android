@@ -1,7 +1,7 @@
 package com.alphawallet.app.ui.widget.entity;
 
 /**
- * Created by JB on 28/10/2020.
+ * Created by Dhaval on 28/10/2020.
  */
 
 import android.content.Context;
@@ -39,8 +39,7 @@ import timber.log.Timber;
 import static com.alphawallet.ethereum.EthereumNetworkBase.MAINNET_ID;
 
 /**
- * Created by James on 4/12/2018.
- * Stormbird in Singapore
+ * Created by Dhaval on 4/12/2018.
  */
 public class ENSHandler implements Runnable
 {

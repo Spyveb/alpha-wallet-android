@@ -12,20 +12,16 @@
         style="@style/Aw.Typography.Title.XLarge.Bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
         android:lines="1"
         android:text="@string/unknown_balance_without_symbol"
         app:autoSizeTextType="uniform"
-        tools:text="$100,000,000,000,000.00" />
+        tools:text="$100,000" />
 
     <TextView
         android:id="@+id/subtitle"
         style="@style/Aw.Typography.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
         android:lines="1"
         android:text="@string/unknown_balance_without_symbol"
         app:autoSizeTextType="uniform"

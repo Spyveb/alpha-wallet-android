@@ -1,7 +1,7 @@
 package com.alphawallet.app.ui.widget.entity;
 
 /**
- * Created by JB on 16/11/2020.
+ * Created by Dhaval on 16/11/2020.
  */
 public enum BoxStatus
 {

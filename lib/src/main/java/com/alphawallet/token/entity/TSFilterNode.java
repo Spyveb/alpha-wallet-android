@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import static com.alphawallet.token.entity.TSSelection.decodeParam;
 
 /**
- * Created by JB on 21/05/2020.
+ * Created by Dhaval on 21/05/2020.
  */
 public class TSFilterNode
 {

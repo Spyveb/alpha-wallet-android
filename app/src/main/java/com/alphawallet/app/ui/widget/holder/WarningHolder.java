@@ -19,8 +19,7 @@ import com.alphawallet.app.ui.widget.entity.WarningData;
 import com.google.android.material.card.MaterialCardView;
 
 /**
- * Created by James on 18/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 18/07/2019.
  */
 
 public class WarningHolder extends BinderViewHolder<WarningData>
@@ -28,7 +27,7 @@ public class WarningHolder extends BinderViewHolder<WarningData>
     public static final int VIEW_TYPE = 1015;
     private final TextView title;
     private final TextView detail;
-    private final MaterialCardView layoutBackground;
+    private final LinearLayout layoutBackground;
     private final ImageView menuButton;
     private final Button backupButton;
     private final View popupAnchor;
@@ -38,9 +37,9 @@ public class WarningHolder extends BinderViewHolder<WarningData>
     {
         title.setText(data.title);
         detail.setText(data.detail);
-        layoutBackground.setCardBackgroundColor(ContextCompat.getColor(getContext(), data.colour));
+       // layoutBackground.setCardBackgroundColor(ContextCompat.getColor(getContext(), data.colour));
         backupButton.setText(data.buttonText);
-        backupButton.setBackgroundColor(data.buttonColour);
+      //  backupButton.setBackgroundColor(data.buttonColour);
         backupButton.setOnClickListener(v ->
         {
             data.callback.BackupClick(data.wallet);

@@ -3,7 +3,7 @@ package com.alphawallet.app.repository;
 import android.text.TextUtils;
 
 /**
- * Created by JB on 17/12/2020.
+ * Created by Dhaval on 17/12/2020.
  */
 public class EventResult
 {

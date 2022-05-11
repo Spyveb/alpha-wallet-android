@@ -1,8 +1,7 @@
 package com.alphawallet.token.entity;
 
 /**
- * Created by James on 2/05/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 2/05/2019.
  */
 
 // A param to pass into a smart contract function call

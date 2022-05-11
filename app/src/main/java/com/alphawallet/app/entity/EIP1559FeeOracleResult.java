@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 /**
- * Created by JB on 20/01/2022.
+ * Created by Dhaval on 20/01/2022.
  */
 public class EIP1559FeeOracleResult implements Parcelable
 {

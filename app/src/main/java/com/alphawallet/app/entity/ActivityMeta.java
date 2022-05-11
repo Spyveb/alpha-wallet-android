@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by JB on 7/07/2020.
+ * Created by Dhaval on 7/07/2020.
  */
 public class ActivityMeta
 {

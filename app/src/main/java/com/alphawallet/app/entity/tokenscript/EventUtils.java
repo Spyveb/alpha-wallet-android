@@ -137,7 +137,7 @@ import timber.log.Timber;
 import static org.web3j.tx.Contract.staticExtractEventParameters;
 
 /**
- * Created by JB on 23/03/2020.
+ * Created by Dhaval on 23/03/2020.
  *
  * Class to contain event filter creation functions
  *

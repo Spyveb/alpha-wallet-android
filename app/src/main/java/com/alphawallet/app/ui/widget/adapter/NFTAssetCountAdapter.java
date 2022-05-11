@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 /**
- * Created by JB on 22/08/2021.
+ * Created by Dhaval on 22/08/2021.
  */
 public class NFTAssetCountAdapter extends RecyclerView.Adapter<NFTAssetAmountHolder> {
     private final List<NFTAsset> assets;

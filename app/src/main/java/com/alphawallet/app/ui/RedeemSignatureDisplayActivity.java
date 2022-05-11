@@ -51,7 +51,7 @@ import static com.alphawallet.app.entity.Operation.SIGN_DATA;
 import dagger.hilt.android.AndroidEntryPoint;
 
 /**
- * Created by James on 24/01/2018.
+ * Created by Dhaval on 24/01/2018.
  */
 @AndroidEntryPoint
 public class RedeemSignatureDisplayActivity extends BaseActivity implements View.OnClickListener, SignAuthenticationCallback, PageReadyCallback

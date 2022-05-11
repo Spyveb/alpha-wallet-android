@@ -19,7 +19,7 @@ import com.alphawallet.app.R;
 import static android.view.animation.Animation.INFINITE;
 
 /**
- * Created by JB on 28/11/2020.
+ * Created by Dhaval on 28/11/2020.
  */
 public class ProgressKnobkerry extends RelativeLayout
 {

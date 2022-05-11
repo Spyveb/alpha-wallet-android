@@ -84,8 +84,15 @@
         <item name="seedWordStyle">@style/Aw.Component.SeedWord</item>
         <item name="whatsNewEntryStyle">@style/Aw.Component.WhatsNewEntry</item>
         <item name="materialAlertDialogTheme">@style/AppTheme.AlertDialog</item>
-    </style>
+        <item name="android:actionButtonStyle">@style/MyActionButtonStyle</item>
 
+    </style>
+    <style name="MyActionButtonStyle" parent="AppTheme">
+        <item name="android:padding">0dp</item>
+        <item name="android:minWidth">40dp</item>
+        <item name="android:minHeight">40dp</item>
+
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

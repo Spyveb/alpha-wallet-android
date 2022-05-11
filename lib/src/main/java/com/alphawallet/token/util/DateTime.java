@@ -6,8 +6,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 /**
- * Created by James on 11/02/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 11/02/2019.
  */
 public abstract class DateTime
 {

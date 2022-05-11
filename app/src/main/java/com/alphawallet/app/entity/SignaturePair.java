@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by James on 30/01/2018. Signature Pair refers to the
+ * Created by Dhaval on 30/01/2018. Signature Pair refers to the
  * following data structure [selection of tokens][signature]. The word
  * "Signature Pair" has nothing to do with the pair of numbers that
  * makes up signature (𝑟, 𝑠), nor does it has anything to do with

@@ -10,7 +10,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by JB on 10/07/2021.
+ * Created by Dhaval on 10/07/2021.
  */
 public class RealmNFTAsset extends RealmObject
 {

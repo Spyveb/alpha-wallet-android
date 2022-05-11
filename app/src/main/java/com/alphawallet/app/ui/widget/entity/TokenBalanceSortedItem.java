@@ -4,7 +4,7 @@ import com.alphawallet.app.ui.widget.holder.TokenDescriptionHolder;
 import com.alphawallet.app.entity.tokens.Token;
 
 /**
- * Created by James on 12/02/2018.
+ * Created by Dhaval on 12/02/2018.
  */
 
 public class TokenBalanceSortedItem extends SortedItem<Token> {

@@ -3,7 +3,7 @@ package com.alphawallet.app.entity.walletconnect;
 import com.alphawallet.app.repository.entity.RealmWCSession;
 
 /**
- * Created by JB on 9/09/2020.
+ * Created by Dhaval on 9/09/2020.
  */
 public class WalletConnectSessionItem
 {

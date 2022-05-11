@@ -216,6 +216,7 @@ dependencies {
 
     // dagger-hilt
     implementation "com.google.dagger:hilt-android:2.40.5"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     annotationProcessor "com.google.dagger:hilt-compiler:2.40.5"
 
     // WebKit - for WebView Dark Mode

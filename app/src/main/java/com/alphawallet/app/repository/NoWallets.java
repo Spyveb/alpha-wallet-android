@@ -3,7 +3,7 @@ package com.alphawallet.app.repository;
 import java.io.IOException;
 
 /**
- * Created by JB on 23/10/2021.
+ * Created by Dhaval on 23/10/2021.
  */
 public class NoWallets
         extends IOException

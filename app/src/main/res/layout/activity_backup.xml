@@ -1,60 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_back_2">
 
     <include layout="@layout/layout_simple_toolbar" />
 
-    <ScrollView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/white"
+        android:visibility="visible"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_above="@id/layoutButtons"
         android:layout_below="@id/toolbar">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp10">
 
-            <TextView
-                android:id="@+id/text_title"
-                style="@style/Aw.Typography.Headline"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:lineSpacingMultiplier="1.2"
-                android:paddingStart="@dimen/double_base_48"
-                android:paddingEnd="@dimen/double_base_48"
-                android:text="@string/backup_seed_phrase"
-                android:textAlignment="center" />
+                android:layout_marginBottom="10dp">
 
-            <ImageView
-                android:id="@+id/backup_seed_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/sp16"
-                android:scaleType="fitCenter"
-                android:src="@drawable/seed"
-                android:visibility="visible" />
 
-            <TextView
-                android:id="@+id/text_detail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_16"
-                android:lineSpacingMultiplier="1.3"
-                android:paddingStart="@dimen/double_base_48"
-                android:paddingEnd="@dimen/double_base_48"
-                android:text="@string/backup_seed_phrase_detail"
-                android:textAlignment="center" />
-        </LinearLayout>
-    </ScrollView>
+                <ImageView
+                    android:id="@+id/backup_seed_image"
+                    android:layout_width="277dp"
+                    android:layout_height="261dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_phrase"
+                    android:visibility="visible" />
 
-    <com.alphawallet.app.widget.FunctionButtonBar
-        android:id="@+id/layoutButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/backup_seed_image"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingMultiplier="1.2"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:text="@string/backup_seed_phrase"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/text_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:lineSpacingMultiplier="1.3"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:text="@string/backup_seed_phrase_detail"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+
+                <Button
+                    android:id="@+id/btnMywallet"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_below="@+id/text_detail"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/ic_btn"
+                    android:fontFamily="@font/font_semibold"
+                    android:text="@string/title_import"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:backgroundTint="#44CEFF" />
+
+                <com.alphawallet.app.widget.FunctionButtonBar
+                    android:id="@+id/layoutButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_detail"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
 
     <LinearLayout
         android:id="@+id/layout_success_overlay"

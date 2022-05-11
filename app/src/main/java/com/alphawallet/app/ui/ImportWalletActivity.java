@@ -55,6 +55,8 @@ import org.web3j.utils.Numeric;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.inject.Inject;
 
@@ -64,6 +66,7 @@ import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
 
 import static com.alphawallet.app.C.ErrorCode.ALREADY_ADDED;
+import static com.alphawallet.app.ui.QRScanning.QRScanner.qrResult;
 import static com.alphawallet.app.widget.AWalletAlertDialog.ERROR;
 
 @AndroidEntryPoint
@@ -79,7 +82,7 @@ public class ImportWalletActivity extends BaseActivity implements OnImportSeedLi
     ImportWalletViewModel importWalletViewModel;
     private AWalletAlertDialog dialog;
     private ImportType currentPage;
-
+    ViewPager2 viewPager;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,7 +101,7 @@ public class ImportWalletActivity extends BaseActivity implements OnImportSeedLi
         pages.add(ImportType.PRIVATE_KEY_FORM_INDEX.ordinal(), new Pair<>(getString(R.string.tab_private_key), ImportPrivateKeyFragment.create()));
         pages.add(ImportType.WATCH_FORM_INDEX.ordinal(), new Pair<>(getString(R.string.watch_wallet), SetWatchWalletFragment.create()));
 
-        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(new TabPagerAdapter(this, pages));
         viewPager.setOffscreenPageLimit(pages.size());
 
@@ -203,6 +206,21 @@ public class ImportWalletActivity extends BaseActivity implements OnImportSeedLi
         if ( getIntent().getStringExtra(C.EXTRA_QR_CODE) != null) {
             // wait till import wallet fragment will be available
             new Handler().postDelayed(() -> handleScanQR(Activity.RESULT_OK, getIntent()), 500);
+        }else {
+            Boolean isQRScanner = getIntent().getBooleanExtra("isQRScanner",false);
+
+            if (isQRScanner){
+                viewPager.setCurrentItem(ImportType.PRIVATE_KEY_FORM_INDEX.ordinal());
+                final Pattern findKey = Pattern.compile("($|\\s?|0x?)([0-9a-fA-F]{64})($|\\s?)");
+                final Matcher privateKeyMatch = findKey.matcher(qrResult);
+                if (privateKeyMatch.find()) {
+                    ((ImportPrivateKeyFragment) pages.get(ImportType.PRIVATE_KEY_FORM_INDEX.ordinal()).second)
+                            .setAddress(qrResult);
+                    // qrResult = null;
+                }
+            }
+
+
         }
     }
 

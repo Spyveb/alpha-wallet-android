@@ -32,8 +32,7 @@ import okhttp3.ResponseBody;
 import timber.log.Timber;
 
 /**
- * Created by James on 2/10/2018.
- * Stormbird in Singapore
+ * Created by Dhaval on 2/10/2018.
  */
 
 public class OpenSeaService

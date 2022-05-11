@@ -2,7 +2,7 @@ package com.alphawallet.app.entity;
 
 
 /**
- * Created by James on 26/03/2018.
+ * Created by Dhaval on 26/03/2018.
  */
 
 public class EtherscanTransaction

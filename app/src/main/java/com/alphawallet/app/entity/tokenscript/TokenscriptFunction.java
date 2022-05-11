@@ -57,8 +57,7 @@ import static com.alphawallet.app.repository.TokenRepository.getWeb3jService;
 import static org.web3j.protocol.core.methods.request.Transaction.createEthCallTransaction;
 
 /**
- * Created by James on 13/06/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 13/06/2019.
  */
 public abstract class TokenscriptFunction
 {

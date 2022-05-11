@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/back">
 
     <com.alphawallet.app.widget.TokenInfoCategoryView
         android:id="@+id/label_attributes"
@@ -19,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_12"
-        android:paddingHorizontal="@dimen/tiny_8" />
+        android:paddingHorizontal="@dimen/tiny_8"
+        android:background="@color/back"/>
 
 </LinearLayout>

@@ -1,8 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by James on 19/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 19/07/2019.
  */
 public interface PinAuthenticationCallbackInterface
 {

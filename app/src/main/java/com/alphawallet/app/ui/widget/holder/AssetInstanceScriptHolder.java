@@ -26,8 +26,7 @@ import com.alphawallet.token.entity.TicketRange;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
 /**
- * Created by James on 26/03/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 26/03/2019.
  */
 public class AssetInstanceScriptHolder extends BinderViewHolder<TicketRange> implements PageReadyCallback, Runnable
 {

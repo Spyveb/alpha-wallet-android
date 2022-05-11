@@ -72,7 +72,7 @@ import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
 
 /**
- * Created by JB on 11/08/2021
+ * Created by Dhaval on 11/08/2021
  */
 @AndroidEntryPoint
 public class TransferNFTActivity extends BaseActivity implements TokensAdapterCallback, StandardFunctionInterface, AddressReadyCallback, ActionSheetCallback, EnsNodeNotSyncCallback

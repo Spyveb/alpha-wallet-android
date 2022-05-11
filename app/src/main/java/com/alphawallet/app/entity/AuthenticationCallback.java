@@ -1,8 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by James on 9/06/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 9/06/2019.
  */
 
 public interface AuthenticationCallback

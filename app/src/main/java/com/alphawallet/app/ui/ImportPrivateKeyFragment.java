@@ -1,8 +1,11 @@
 package com.alphawallet.app.ui;
 
+import static com.alphawallet.app.ui.QRScanning.QRScanner.qrResult;
+
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +36,7 @@ public class ImportPrivateKeyFragment extends ImportFragment
     private OnImportPrivateKeyListener onImportPrivateKeyListener = dummyOnImportPrivateKeyListener;
     private Pattern pattern;
     private LinearLayout buttonHolder;
+    private String strAddress;
 
     public static ImportPrivateKeyFragment create() {
         return new ImportPrivateKeyFragment();
@@ -62,6 +66,8 @@ public class ImportPrivateKeyFragment extends ImportFragment
         pattern = Pattern.compile(validator, Pattern.MULTILINE);
 
         privateKey.setLayoutListener(getActivity(), this);
+        privateKey.setText(qrResult);
+        qrResult = null;
     }
 
     @Override
@@ -116,7 +122,17 @@ public class ImportPrivateKeyFragment extends ImportFragment
                 ? dummyOnImportPrivateKeyListener
                 : onImportPrivateKeyListener;
     }
+    public void setAddress(String address)
+    {
+        Log.e("address","+++"+address);
 
+        if (address == null || getActivity() == null) return;
+        Log.e("address",""+address);
+
+        privateKey = getActivity().findViewById(R.id.input_private_key);
+        privateKey.setText(address);
+        strAddress = address;
+    }
     @Override
     public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
     {

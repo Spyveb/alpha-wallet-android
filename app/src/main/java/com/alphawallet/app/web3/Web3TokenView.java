@@ -69,8 +69,7 @@ import static com.alphawallet.app.service.AssetDefinitionService.ASSET_SUMMARY_V
 import static com.alphawallet.token.tools.TokenDefinition.TOKENSCRIPT_ERROR;
 
 /**
- * Created by James on 3/04/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 3/04/2019.
  */
 public class Web3TokenView extends WebView
 {

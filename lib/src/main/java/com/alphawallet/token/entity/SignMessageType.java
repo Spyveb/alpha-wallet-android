@@ -1,7 +1,7 @@
 package com.alphawallet.token.entity;
 
 /**
- * Created by JB on 11/01/2021.
+ * Created by Dhaval on 11/01/2021.
  */
 public enum SignMessageType
 {

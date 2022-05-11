@@ -33,8 +33,7 @@ import java.math.RoundingMode;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements View.OnClickListener, AvatarWriteCallback
-{
+public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements View.OnClickListener, AvatarWriteCallback {
 
     public static final int VIEW_TYPE = 1001;
     public final static String IS_DEFAULT_ADDITION = "is_default";
@@ -56,8 +55,7 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
     private final WalletClickCallback clickCallback;
     private Wallet wallet = null;
 
-    public WalletSummaryHolder(int resId, ViewGroup parent, WalletClickCallback callback, Realm realm)
-    {
+    public WalletSummaryHolder(int resId, ViewGroup parent, WalletClickCallback callback, Realm realm) {
         super(resId, parent);
         defaultWalletIndicator = findViewById(R.id.image_default_indicator);
         manageWalletBtn = findViewById(R.id.manage_wallet_btn);
@@ -74,42 +72,38 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
     }
 
     @Override
-    public void bind(@Nullable Wallet data, @NonNull Bundle addition)
-    {
+    public void bind(@Nullable Wallet data, @NonNull Bundle addition) {
         walletAddressText.setText(null);
         if (realmUpdate != null) realmUpdate.removeAllChangeListeners();
 
-        if (data != null)
-        {
+        if (data != null) {
             wallet = fetchWallet(data);
             walletClickLayout.setOnClickListener(this);
             manageWalletLayout.setOnClickListener(this);
+            manageWalletBtn.setOnClickListener(this);
 
-            if (addition.getBoolean(IS_DEFAULT_ADDITION, false))
+            defaultWalletIndicator.setSelected(addition.getBoolean(IS_DEFAULT_ADDITION, false));
+
+          /*  if (addition.getBoolean(IS_DEFAULT_ADDITION, false))
             {
                 defaultWalletIndicator.setVisibility(View.VISIBLE);
             }
             else
             {
                 defaultWalletIndicator.setVisibility(View.INVISIBLE);
-            }
+            }*/
 
             manageWalletBtn.setVisibility(View.VISIBLE);
 
-            if (wallet.name != null && !wallet.name.isEmpty())
-            {
+            if (wallet.name != null && !wallet.name.isEmpty()) {
                 walletNameText.setText(wallet.name);
                 walletAddressSeparator.setVisibility(View.VISIBLE);
                 walletNameText.setVisibility(View.VISIBLE);
-            }
-            else if (wallet.ENSname != null && wallet.ENSname.length() > 0)
-            {
+            } else if (wallet.ENSname != null && wallet.ENSname.length() > 0) {
                 walletNameText.setText(wallet.ENSname);
                 walletAddressSeparator.setVisibility(View.VISIBLE);
                 walletNameText.setVisibility(View.VISIBLE);
-            }
-            else
-            {
+            } else {
                 walletAddressSeparator.setVisibility(View.GONE);
                 walletNameText.setVisibility(View.GONE);
             }
@@ -117,25 +111,20 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
             walletIcon.bind(wallet, this);
 
             String walletBalance = wallet.balance;
-            if (!TextUtils.isEmpty(walletBalance) && walletBalance.startsWith("*"))
-            {
+            if (!TextUtils.isEmpty(walletBalance) && walletBalance.startsWith("*")) {
                 walletBalance = walletBalance.substring(1);
             }
             walletBalanceText.setText(String.format("%s %s", walletBalance, wallet.balanceSymbol));
 
             walletAddressText.setText(Utils.formatAddress(wallet.address));
 
-            if (addition.getBoolean(IS_SYNCED, false))
-            {
+            if (addition.getBoolean(IS_SYNCED, false)) {
                 walletIcon.finishWaiting();
-            }
-            else
-            {
+            } else {
                 walletIcon.setWaiting();
             }
 
-            if (addition.getDouble(FIAT_VALUE, -1.00) != -1.00)
-            {
+            if (addition.getDouble(FIAT_VALUE, -1.00) != -1.00) {
                 double fiatValue = addition.getDouble(FIAT_VALUE, 0.00);
                 double oldFiatValue = addition.getDouble(FIAT_CHANGE, 0.00);
 
@@ -143,9 +132,7 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
 
                 walletBalanceText.setText(balanceTxt);
                 setWalletChange(fiatValue != 0 ? ((fiatValue - oldFiatValue) / oldFiatValue) * 100.0 : 0.0);
-            }
-            else
-            {
+            } else {
                 wallet24hChange.setVisibility(View.GONE);
             }
 
@@ -154,16 +141,13 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
         }
     }
 
-    public void setWaiting()
-    {
+    public void setWaiting() {
         walletIcon.setWaiting();
     }
 
-    private void setWalletChange(double percentChange24h)
-    {
+    private void setWalletChange(double percentChange24h) {
         //This sets the 24hr percentage change (rightmost value)
-        try
-        {
+        try {
             wallet24hChange.setVisibility(View.VISIBLE);
             int color = ContextCompat.getColor(getContext(), percentChange24h < 0 ? R.color.negative : R.color.positive);
             BigDecimal percentChangeBI = BigDecimal.valueOf(percentChange24h).setScale(3, RoundingMode.DOWN);
@@ -172,13 +156,10 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
             wallet24hChange.setText(formattedPercents);
             wallet24hChange.setTextColor(color);
             //image24h.setImageResource(percentage < 0 ? R.drawable.ic_price_down : R.drawable.ic_price_up);
-        }
-        catch (Exception ex)
-        { /* Quietly */ }
+        } catch (Exception ex) { /* Quietly */ }
     }
 
-    private void startRealmListener()
-    {
+    private void startRealmListener() {
         realmUpdate = realm.where(RealmWalletData.class)
                 .equalTo("address", wallet.address).findAllAsync();
         realmUpdate.addChangeListener(realmWallets -> {
@@ -189,14 +170,11 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
             //walletBalanceText.setText(realmWallet.getBalance());
             String ensName = realmWallet.getENSName();
             String name = realmWallet.getName();
-            if (!TextUtils.isEmpty(name))
-            {
+            if (!TextUtils.isEmpty(name)) {
                 walletNameText.setText(name);
                 walletAddressSeparator.setVisibility(View.VISIBLE);
                 walletNameText.setVisibility(View.VISIBLE);
-            }
-            else if (!TextUtils.isEmpty(ensName))
-            {
+            } else if (!TextUtils.isEmpty(ensName)) {
                 walletNameText.setText(ensName);
                 walletAddressSeparator.setVisibility(View.VISIBLE);
                 walletNameText.setVisibility(View.VISIBLE);
@@ -204,14 +182,12 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
         });
     }
 
-    private Wallet fetchWallet(Wallet w)
-    {
+    private Wallet fetchWallet(Wallet w) {
         RealmWalletData realmWallet = realm.where(RealmWalletData.class)
                 .equalTo("address", w.address)
                 .findFirst();
 
-        if (realmWallet != null)
-        {
+        if (realmWallet != null) {
             w.balance = realmWallet.getBalance();
             w.ENSname = realmWallet.getENSName();
             w.name = realmWallet.getName();
@@ -221,25 +197,19 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
         return w;
     }
 
-    private void checkLastBackUpTime()
-    {
+    private void checkLastBackUpTime() {
         boolean isBackedUp = wallet.lastBackupTime > 0;
-        switch (wallet.type)
-        {
+        switch (wallet.type) {
             case KEYSTORE_LEGACY:
             case KEYSTORE:
             case HDKEY:
-                switch (wallet.authLevel)
-                {
+                switch (wallet.authLevel) {
                     case NOT_SET:
                     case TEE_NO_AUTHENTICATION:
                     case STRONGBOX_NO_AUTHENTICATION:
-                        if (!isBackedUp)
-                        {
+                        if (!isBackedUp) {
                             // TODO: Display indicator
-                        }
-                        else
-                        {
+                        } else {
                             // TODO: Display indicator
                         }
                         break;
@@ -257,13 +227,19 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
     }
 
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
         //if (wallet == null) { return; } //protect against click between constructor and bind
-        switch (view.getId())
-        {
+        switch (view.getId()) {
             case R.id.wallet_click_layer:
                 clickCallback.onWalletClicked(wallet);
+                break;
+
+            case R.id.manage_wallet_btn:
+                Intent intent1 = new Intent(getContext(), WalletActionsActivity.class);
+                intent1.putExtra("wallet", wallet);
+                intent1.putExtra("currency", wallet.balanceSymbol);
+                intent1.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                getContext().startActivity(intent1);
                 break;
 
             case R.id.layout_manage_wallet:
@@ -277,8 +253,7 @@ public class WalletSummaryHolder extends BinderViewHolder<Wallet> implements Vie
     }
 
     @Override
-    public void avatarFound(Wallet wallet)
-    {
+    public void avatarFound(Wallet wallet) {
         if (clickCallback != null) clickCallback.ensAvatar(wallet);
     }
 }

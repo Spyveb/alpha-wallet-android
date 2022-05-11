@@ -10,8 +10,7 @@ import android.widget.TextView;
 import com.alphawallet.app.R;
 
 /**
- * Created by James on 20/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 20/07/2019.
  */
 public class TextHolder extends BinderViewHolder<String>
 {

@@ -1,7 +1,7 @@
 package com.alphawallet.app.entity.cryptokeys;
 
 /**
- * Created by JB on 16/07/2021.
+ * Created by Dhaval on 16/07/2021.
  */
 public enum KeyEncodingType
 {

@@ -5,11 +5,14 @@
     android:id="@+id/coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/ic_home_back"
+    >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -25,7 +28,8 @@
             android:id="@+id/large_title_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap" />
+            app:layout_scrollFlags="scroll|snap"
+            android:layout_marginBottom="40dp"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
@@ -33,15 +37,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            app:layout_scrollFlags="enterAlways" />
+            app:layout_scrollFlags="enterAlways"
+            app:tabPaddingEnd="40dp"
+            android:paddingBottom="5dp"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingStart="40dp"
+            app:tabPaddingTop="2dp"
+            android:layout_marginTop="10dp"
+            app:tabPaddingBottom="2dp"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/white" />
+       <!-- <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            style="@style/Aw.Component.TabLayout.Scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:elevation="0dp"
+            android:backgroundTint="@android:color/transparent"
+            android:background="@drawable/background_tab_layout"
+            app:layout_scrollFlags="enterAlways"
+            app:tabPaddingEnd="20dp"
+            android:paddingBottom="5dp"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingStart="20dp"
+            app:tabPaddingTop="2dp"
+            app:tabPaddingBottom="2dp"
+            app:tabGravity="center"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/WalletTabTextAppearance"
+            app:tabTextColor="@color/black"
+            />-->
 
-        <View style="@style/Aw.Component.Separator" />
 
         <com.alphawallet.app.widget.NotificationView
             android:id="@+id/notification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_bottom_border" />
+            android:background="@drawable/background_bottom_border"
+            android:visibility="gone"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -54,7 +89,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="#F5FAFD"
+            android:clipToPadding="false"
+            android:paddingBottom="100dp"/>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

@@ -13,6 +13,7 @@
         <item name="contentInsetRight">0dp</item>
         <item name="contentInsetStartWithNavigation">0dp</item>
         <item name="navigationIconTint">?colorControlNormal</item>
+
     </style>
 
     <style name="Aw.Component.ActionItem" parent="Widget.MaterialComponents.TextView">
@@ -63,6 +64,8 @@
     <style name="Aw.Component.TabLayout.Scrollable">
         <item name="tabMode">scrollable</item>
         <item name="tabGravity">center</item>
+        <item name="tabBackground">@drawable/tab_bg</item>
+
     </style>
 
     <style name="Aw.Component.ChartTabLayout" parent="Widget.Design.TabLayout">
@@ -120,7 +123,7 @@
 
     <style name="Aw.Component.Button.Secondary">
         <item name="android:lines">1</item>
-        <item name="android:backgroundTint">@color/transparent</item>
+
         <item name="android:textColor">?colorOnSurface</item>
         <item name="strokeColor">?colorOnSurface</item>
         <item name="strokeWidth">1dp</item>

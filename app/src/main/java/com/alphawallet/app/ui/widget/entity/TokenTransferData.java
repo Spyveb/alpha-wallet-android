@@ -19,7 +19,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by JB on 17/12/2020.
+ * Created by Dhaval on 17/12/2020.
  */
 public class TokenTransferData extends ActivityMeta implements Parcelable
 {

@@ -25,7 +25,7 @@ import io.realm.Sort;
 import static com.alphawallet.app.repository.TokensRealmSource.EVENT_CARDS;
 
 /**
- * Created by JB on 17/12/2020.
+ * Created by Dhaval on 17/12/2020.
  */
 public class RealmTransfer extends RealmObject
 {

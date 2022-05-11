@@ -44,7 +44,7 @@ import com.alphawallet.app.service.AssetDefinitionService;
 import javax.inject.Inject;
 
 /**
- * Created by James on 25/01/2018.
+ * Created by Dhaval on 25/01/2018.
  */
 @HiltViewModel
 public class RedeemSignatureDisplayModel extends BaseViewModel

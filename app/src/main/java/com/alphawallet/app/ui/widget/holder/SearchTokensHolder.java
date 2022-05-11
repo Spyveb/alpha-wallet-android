@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,6 +22,7 @@ public class SearchTokensHolder extends BinderViewHolder<ManageTokensData> {
     final EditText editSearch;
     final SearchHandler searchHandler;
     final View searchTokenClick;
+    final FrameLayout click;
     String wallet;
 
     @Override
@@ -36,6 +38,10 @@ public class SearchTokensHolder extends BinderViewHolder<ManageTokensData> {
         searchTokenClick.setOnClickListener(v -> {
             if (searchHandler != null) searchHandler.onFocus();
         });
+
+        click.setOnClickListener(v -> {
+            if (searchHandler != null) searchHandler.onFocus();
+        });
     }
 
     public SearchTokensHolder(int res_id, ViewGroup parent, SearchHandler handler) {
@@ -43,6 +49,7 @@ public class SearchTokensHolder extends BinderViewHolder<ManageTokensData> {
         this.editSearch = findViewById(R.id.edit_search);
         this.searchHandler = handler;
         this.searchTokenClick = findViewById(R.id.click_layer);
+        this.click = findViewById(R.id.click);
         this.wallet = null;
     }
 }

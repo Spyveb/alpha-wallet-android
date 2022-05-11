@@ -53,8 +53,7 @@ import io.realm.RealmResults;
 import timber.log.Timber;
 
 /**
- * Created by James on 2/04/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 2/04/2019.
  */
 @AndroidEntryPoint
 public class TokenFunctionActivity extends BaseActivity implements StandardFunctionInterface, PageReadyCallback,

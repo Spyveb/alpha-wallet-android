@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by JB on 20/03/2020 for namedType in ASN.X included in TokenScript. It's used for events & attestations.
+ * Created by Dhaval on 20/03/2020 for namedType in ASN.X included in TokenScript. It's used for events & attestations.
  */
 public class NamedType
 {

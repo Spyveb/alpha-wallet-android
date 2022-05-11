@@ -12,7 +12,7 @@ import java.util.TimeZone;
 import java.util.UUID;
 
 /**
- * Created by JB on 18/12/2020.
+ * Created by Dhaval on 18/12/2020.
  */
 public class TransferSortedItem extends TimestampSortedItem<TokenTransferData> {
 

@@ -168,7 +168,7 @@ public class NewSettingsFragment extends BaseFragment
 
     private void initBackupWarningViews(View view)
     {
-        layoutBackup = view.findViewById(R.id.layout_item_warning);
+        layoutBackup = view.findViewById(R.id.card_backup);
         backupTitle = view.findViewById(R.id.text_title);
         backupDetail = view.findViewById(R.id.text_detail);
         backupButton = view.findViewById(R.id.button_backup);
@@ -233,11 +233,11 @@ public class NewSettingsFragment extends BaseFragment
                         .withListener(this::onNotificationsSettingClicked)
                         .build();
 
-        changeLanguage = new SettingsItemView.Builder(getContext())
+        /*changeLanguage = new SettingsItemView.Builder(getContext())
                 .withIcon(R.drawable.ic_settings_language)
                 .withTitle(R.string.title_change_language)
                 .withListener(this::onChangeLanguageClicked)
-                .build();
+                .build();*/
 
         changeCurrency = new SettingsItemView.Builder(getContext())
                 .withIcon(R.drawable.ic_currency)
@@ -267,12 +267,12 @@ public class NewSettingsFragment extends BaseFragment
                         .withListener(this::onAdvancedSettingClicked)
                         .build();
 
-        darkModeSetting =
+        /*darkModeSetting =
                 new SettingsItemView.Builder(getContext())
                         .withIcon(R.drawable.ic_settings_darkmode)
                         .withTitle(R.string.title_dark_mode)
                         .withListener(this::onDarkModeSettingClicked)
-                        .build();
+                        .build();*/
 
         supportSetting =
                 new SettingsItemView.Builder(getContext())
@@ -310,11 +310,11 @@ public class NewSettingsFragment extends BaseFragment
 
         systemSettingsLayout.addView(notificationsSetting, systemIndex++);
 
-        systemSettingsLayout.addView(changeLanguage, systemIndex++);
+       // systemSettingsLayout.addView(changeLanguage, systemIndex++);
 
         systemSettingsLayout.addView(changeCurrency, systemIndex++);
 
-        systemSettingsLayout.addView(darkModeSetting, systemIndex++);
+       // systemSettingsLayout.addView(darkModeSetting, systemIndex++);
 
         systemSettingsLayout.addView(advancedSetting, systemIndex++);
 
@@ -449,7 +449,7 @@ public class NewSettingsFragment extends BaseFragment
 
         viewModel.setLocale(getContext());
 
-        changeLanguage.setSubtitle(LocaleUtils.getDisplayLanguage(viewModel.getActiveLocale(), viewModel.getActiveLocale()));
+       // changeLanguage.setSubtitle(LocaleUtils.getDisplayLanguage(viewModel.getActiveLocale(), viewModel.getActiveLocale()));
 
         changeCurrency.setSubtitle(viewModel.getDefaultCurrency());
     }
@@ -500,7 +500,7 @@ public class NewSettingsFragment extends BaseFragment
     void addBackupNotice(GenericWalletInteract.BackupLevel walletValue)
     {
         layoutBackup.setVisibility(View.VISIBLE);
-        warningSeparator.setVisibility(View.VISIBLE);
+        warningSeparator.setVisibility(View.GONE);
         if (wallet != null)
         {
             backupButton.setText(getString(R.string.back_up_wallet_action, wallet.address.substring(0, 5)));

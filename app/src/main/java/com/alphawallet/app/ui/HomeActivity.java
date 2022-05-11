@@ -68,6 +68,7 @@ import com.alphawallet.app.repository.EthereumNetworkRepository;
 import com.alphawallet.app.router.ImportTokenRouter;
 import com.alphawallet.app.service.NotificationService;
 import com.alphawallet.app.service.PriceAlertsService;
+import com.alphawallet.app.ui.QRScanning.QRScanner;
 import com.alphawallet.app.ui.widget.entity.PagerCallback;
 import com.alphawallet.app.util.LocaleUtils;
 import com.alphawallet.app.util.UpdateUtils;
@@ -421,11 +422,23 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
     {
         successOverlay = findViewById(R.id.layout_success_overlay);
         successImage = findViewById(R.id.success_image);
+       ImageView fabQRCode = findViewById(R.id.fabQRCode);
 
         successOverlay.setOnClickListener(view ->
         {
             //dismiss big green tick
             successOverlay.setVisibility(View.GONE);
+        });
+        fabQRCode.setOnClickListener(view -> {
+          /*  Intent intent = new Intent(this, QRScanner.class);
+            intent.putExtra(C.EXTRA_UNIVERSAL_SCAN, true);
+            startActivityForResult(intent, C.REQUEST_UNIVERSAL_SCAN);*/
+            // onAddWallet();
+
+            Intent intent = new Intent(this, QRScanner.class);
+            intent.putExtra(C.EXTRA_UNIVERSAL_SCAN, true);
+            this.startActivityForResult(intent, C.REQUEST_UNIVERSAL_SCAN);
+
         });
     }
 
@@ -844,7 +857,8 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
                     walletFragment = new WalletFragment();
                     return walletFragment;
                 case ACTIVITY:
-                    activityFragment = new ActivityFragment();
+                    activityFragment = new WalletsNewFragment();
+                   // activityFragment = new ActivityFragment();
                     return activityFragment;
                 case DAPP_BROWSER:
                     if (CustomViewSettings.hideDappBrowser()) dappBrowserFragment = new Fragment();
@@ -940,7 +954,7 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
     @Override
     public void resetTokens()
     {
-        ((ActivityFragment) getFragment(ACTIVITY)).resetTokens();
+       // ((ActivityFragment) getFragment(ACTIVITY)).resetTokens();
         ((WalletFragment) getFragment(WALLET)).resetTokens();
     }
 

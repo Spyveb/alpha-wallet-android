@@ -267,8 +267,7 @@ public class NFTActivity extends BaseActivity implements StandardFunctionInterfa
 
     private void setupFunctionBar()
     {
-        if (BuildConfig.DEBUG || wallet.type != WalletType.WATCH)
-        {
+        if (BuildConfig.DEBUG || wallet.type != WalletType.WATCH) {
             functionBar = findViewById(R.id.layoutButtons);
             functionBar.setupFunctions(this, viewModel.getAssetDefinitionService(), token, null, null);
             functionBar.revealButtons();

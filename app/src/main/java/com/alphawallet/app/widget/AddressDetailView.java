@@ -18,7 +18,7 @@ import com.alphawallet.app.entity.tokens.Token;
 import com.alphawallet.app.util.Utils;
 
 /**
- * Created by JB on 28/11/2020.
+ * Created by Dhaval on 28/11/2020.
  */
 public class AddressDetailView extends LinearLayout
 {

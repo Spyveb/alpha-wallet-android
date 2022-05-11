@@ -215,6 +215,11 @@ public class WalletViewModel extends BaseViewModel
         token.tokenInfo.isEnabled = enabled;
     }
 
+    public void showMyAddress2(Context context)
+    {
+        myAddressRouter.open(context, defaultWallet.getValue());
+    }
+
     public void showMyAddress(Context context)
     {
         // show bottomsheet dialog

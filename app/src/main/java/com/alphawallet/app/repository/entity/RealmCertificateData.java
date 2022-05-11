@@ -7,7 +7,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by JB on 4/02/2020.
+ * Created by Dhaval on 4/02/2020.
  */
 public class RealmCertificateData extends RealmObject
 {

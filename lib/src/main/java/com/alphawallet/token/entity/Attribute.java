@@ -21,8 +21,7 @@ import java.util.Map;
 import static org.w3c.dom.Node.ELEMENT_NODE;
 
 /**
- * Created by James on 9/05/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 9/05/2019.
  */
 
 public class Attribute {

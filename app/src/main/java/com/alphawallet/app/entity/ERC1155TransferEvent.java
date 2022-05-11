@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.math.BigInteger;
 
 /**
- * Created by JB on 14/07/2021.
+ * Created by Dhaval on 14/07/2021.
  */
 
 public class ERC1155TransferEvent implements Comparable<ERC1155TransferEvent>

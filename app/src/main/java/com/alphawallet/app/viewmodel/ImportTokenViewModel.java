@@ -62,7 +62,7 @@ import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
 
 /**
- * Created by James on 9/03/2018.
+ * Created by Dhaval on 9/03/2018.
  */
 @HiltViewModel
 public class ImportTokenViewModel extends BaseViewModel

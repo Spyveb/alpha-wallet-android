@@ -1,7 +1,7 @@
 package com.alphawallet.app.ui.widget.holder;
 
 /**
- * Created by James on 27/02/2018.
+ * Created by Dhaval on 27/02/2018.
  */
 
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import com.alphawallet.app.R;
 import com.alphawallet.app.entity.tokens.Token;
 
 /**
- * Created by James on 13/02/2018.
+ * Created by Dhaval on 13/02/2018.
  */
 
 public class RedeemTicketHolder extends BinderViewHolder<Token> {

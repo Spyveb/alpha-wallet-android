@@ -8,9 +8,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.Html;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.lifecycle.ViewModelProvider;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.alphawallet.app.R;
 import com.alphawallet.app.entity.CreateWalletCallbackInterface;
@@ -36,7 +46,15 @@ public class SplashActivity extends BaseActivity implements CreateWalletCallback
 
     private Handler handler = new Handler(Looper.getMainLooper());
     private String errorMessage;
-
+    private ViewPager viewPager;
+    private ViewPagerAdapter viewPagerAdapter;
+    private LinearLayout dotsLayout,llSlide3;
+    private TextView[] dots;
+    private int[] layouts;
+    private Button btnSkip, btnNext;
+    private TextView tvSkip;
+    private RelativeLayout rlCreateWallet;
+    private Button button_create;
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
@@ -59,6 +77,114 @@ public class SplashActivity extends BaseActivity implements CreateWalletCallback
         splashViewModel.fetchWallets();
 
         checkRoot();
+        viewPager = (ViewPager) findViewById ( R.id.view_pager );
+        dotsLayout = (LinearLayout) findViewById ( R.id.layoutDots );
+        llSlide3 = (LinearLayout) findViewById ( R.id.llSlide3 );
+        tvSkip = (TextView) findViewById ( R.id.tvSkip );
+        rlCreateWallet = (RelativeLayout) findViewById ( R.id.rlCreateWallet );
+        button_create = (Button) findViewById ( R.id.button_create );
+        // btnSkip = (Button) findViewById ( R.id.btn_skip );
+        //btnNext = (Button) findViewById ( R.id.btn_next );
+
+        layouts = new int[]{
+                R.layout.slide1,
+                R.layout.slide2,
+                R.layout.slide3};
+
+        // adding bottom dots
+        addBottomDots ( 0 );
+
+
+        viewPagerAdapter = new ViewPagerAdapter ();
+        viewPager.setAdapter ( viewPagerAdapter );
+        viewPager.addOnPageChangeListener ( viewPagerPageChangeListener );
+
+    }
+    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener () {
+
+
+        @Override
+        public void onPageSelected(int position) {
+            addBottomDots ( position );
+
+            // changing the next button text 'NEXT' / 'GOT IT'
+            if (position == layouts.length - 1) {
+                // last page. make button text to GOT IT
+                // btnNext.setText ( "start" );
+                tvSkip.setVisibility ( View.GONE );
+                llSlide3.setVisibility ( View.VISIBLE );
+            } else {
+                // still pages are left
+                // btnNext.setText ( getString ( "next" );
+                tvSkip.setVisibility ( View.GONE );
+                llSlide3.setVisibility ( View.GONE );
+
+            }
+        }
+
+        @Override
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
+
+        }
+    };
+    private void addBottomDots(int currentPage) {
+        dots = new TextView[layouts.length];
+
+        dotsLayout.removeAllViews();
+        for (int i = 0; i < dots.length; i++) {
+            dots[i] = new TextView(this);
+            dots[i].setText( Html.fromHtml("&#8226;"));
+            dots[i].setTextSize(50);
+            dots[i].setPadding(10,0,0,0);
+            dots[i].setTextColor(getResources().getColor(R.color.dot_inactive));
+            dotsLayout.addView(dots[i]);
+        }
+
+        if (dots.length > 0)
+            dots[currentPage].setTextColor(getResources().getColor(R.color.dot_active));
+
+
+    }
+    public class ViewPagerAdapter extends PagerAdapter {
+        private LayoutInflater layoutInflater;
+
+
+        public ViewPagerAdapter() {
+
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            layoutInflater = (LayoutInflater) getSystemService( Context.LAYOUT_INFLATER_SERVICE);
+
+            View view = layoutInflater.inflate(layouts[position], container, false);
+            container.addView(view);
+
+            return view;
+        }
+
+        @Override
+        public int getCount() {
+            return layouts.length;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object obj) {
+            return view == obj;
+        }
+
+
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            View view = (View) object;
+            container.removeView(view);
+        }
     }
 
     protected Activity getThisActivity()
@@ -87,13 +213,13 @@ public class SplashActivity extends BaseActivity implements CreateWalletCallback
         {
             splashViewModel.setDefaultBrowser();
             findViewById(R.id.layout_new_wallet).setVisibility(View.VISIBLE);
-            findViewById(R.id.button_create).setOnClickListener(v -> {
+            rlCreateWallet.setOnClickListener(v -> {
                 splashViewModel.createNewWallet(this, this);
             });
-            findViewById(R.id.button_watch).setOnClickListener(v -> {
+            findViewById(R.id.rlWatchMyNote).setOnClickListener(v -> {
                 new ImportWalletRouter().openWatchCreate(this, IMPORT_REQUEST_CODE);
             });
-            findViewById(R.id.button_import).setOnClickListener(v -> {
+            findViewById(R.id.rlImportMyNote).setOnClickListener(v -> {
                 new ImportWalletRouter().openForResult(this, IMPORT_REQUEST_CODE);
             });
         }

@@ -7,7 +7,8 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/layout_simple_toolbar" />
+        layout="@layout/layout_simple_toolbar"
+        android:visibility="gone"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +19,39 @@
         <com.journeyapps.barcodescanner.DecoratedBarcodeView
             android:id="@+id/scanner_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_new" />
+
+            <ImageView
+                android:id="@+id/imgFlash"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/flash_2" />
+
+            <ImageView
+                android:id="@+id/imgAR"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/fi_box" />
+
+        </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,14 +59,42 @@
             android:layout_alignTop="@+id/scanner_view"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/double_large_64"
-            android:text="@string/message_scan_camera" />
+            android:text="@string/message_scan_camera"
+            android:visibility="gone"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/imgbrowse"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_recent" />
+
+            <ImageView
+                android:id="@+id/imgCapture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_shutter" />
+
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="@dimen/large_32"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/flash_button"

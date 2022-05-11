@@ -14,6 +14,7 @@ import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -79,6 +80,7 @@ public class BackupKeyActivity extends BaseActivity implements
     private AWalletAlertDialog alertDialog;
     private String keystorePassword;
     private FunctionButtonBar functionButtonBar;
+    private Button btnMywallet;
 
     private boolean hasNoLock = false;
 
@@ -150,8 +152,8 @@ public class BackupKeyActivity extends BaseActivity implements
         setupTestSeed();
         ((TextView) findViewById(R.id.text_title)).setText(R.string.your_seed_phrase);
         DisplaySeed();
-        functionButtonBar.setPrimaryButtonText(R.string.hide_seed_text);
-        functionButtonBar.setPrimaryButtonClickListener(this);
+        btnMywallet.setText(R.string.hide_seed_text);
+        btnMywallet.setOnClickListener(this);
     }
 
     private void initBackupType()
@@ -237,8 +239,10 @@ public class BackupKeyActivity extends BaseActivity implements
             res = R.string.action_upgrade_key;
         }
 
+        btnMywallet.setText(res);
         functionButtonBar.setPrimaryButtonText(res);
         functionButtonBar.setPrimaryButtonClickListener(this);
+        btnMywallet.setOnClickListener(this);
     }
 
     @Override
@@ -377,6 +381,7 @@ public class BackupKeyActivity extends BaseActivity implements
         verifyTextContainer = findViewById(R.id.container);
         backupImage = findViewById(R.id.backup_seed_image);
         functionButtonBar = findViewById(R.id.layoutButtons);
+        btnMywallet = findViewById(R.id.btnMywallet);
         inputView = findViewById(R.id.input_password);
         if (inputView != null)
         {
@@ -609,8 +614,8 @@ public class BackupKeyActivity extends BaseActivity implements
         initViews();
         state = BackupState.WRITE_DOWN_SEED_PHRASE;
         title.setText(R.string.write_down_seed_phrase);
-        functionButtonBar.setPrimaryButtonText(R.string.wrote_down_seed_phrase);
-        functionButtonBar.setPrimaryButtonClickListener(this);
+        btnMywallet.setText(R.string.wrote_down_seed_phrase);
+        btnMywallet.setOnClickListener(this);
     }
 
     private void DisplaySeed()

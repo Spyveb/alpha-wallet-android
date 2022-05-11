@@ -10,7 +10,7 @@ import com.alphawallet.token.entity.TicketRange;
 import com.alphawallet.app.service.AssetDefinitionService;
 
 /**
- * Created by James on 9/02/2018.
+ * Created by Dhaval on 9/02/2018.
  */
 public class TicketHolder extends BaseTicketHolder
 {

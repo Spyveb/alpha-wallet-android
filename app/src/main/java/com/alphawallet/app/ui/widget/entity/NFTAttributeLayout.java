@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by JB on 2/09/2021.
+ * Created by Dhaval on 2/09/2021.
  */
 public class NFTAttributeLayout extends LinearLayout {
     private final TokenInfoCategoryView labelAttributes;

@@ -58,7 +58,7 @@ import okhttp3.Response;
 import timber.log.Timber;
 
 /**
- * Created by JB on 18/11/2020.
+ * Created by Dhaval on 18/11/2020.
  *
  * Starts a cycle to update the gas settings stored in the database
  */

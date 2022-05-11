@@ -15,6 +15,7 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -63,6 +64,7 @@ import dagger.hilt.android.AndroidEntryPoint;
 @AndroidEntryPoint
 public class ScammerWarningActivity extends BaseActivity {
     private FunctionButtonBar functionButtonBar;
+    private Button btnMywallet;
     private Wallet wallet;
 
     @Override
@@ -86,8 +88,8 @@ public class ScammerWarningActivity extends BaseActivity {
     private void setShowSeedPhraseSplash() {
         setContentView(R.layout.activity_show_seed);
         initViews();
-        functionButtonBar.setPrimaryButtonText(R.string.show_seed_phrase);
-        functionButtonBar.setPrimaryButtonClickListener(v -> {
+        btnMywallet.setText(R.string.show_seed_phrase);
+        btnMywallet.setOnClickListener(v -> {
             openBackupKeyActivity();
         });
     }
@@ -101,6 +103,7 @@ public class ScammerWarningActivity extends BaseActivity {
 
     private void initViews() {
         functionButtonBar = findViewById(R.id.layoutButtons);
+        btnMywallet = findViewById(R.id.btnMywallet);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         toolbar();
         setTitle(getString(R.string.empty));

@@ -1,8 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by James on 20/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 20/07/2019.
  */
 public enum AuthenticationFailType
 {

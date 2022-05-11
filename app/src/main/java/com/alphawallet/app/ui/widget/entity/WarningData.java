@@ -4,8 +4,7 @@ import com.alphawallet.app.entity.BackupTokenCallback;
 import com.alphawallet.app.entity.Wallet;
 
 /**
- * Created by James on 18/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 18/07/2019.
  */
 public class WarningData
 {

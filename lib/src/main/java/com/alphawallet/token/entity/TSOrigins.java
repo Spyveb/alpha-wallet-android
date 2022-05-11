@@ -3,7 +3,7 @@ package com.alphawallet.token.entity;
 import org.xml.sax.SAXException;
 
 /**
- * Created by JB on 27/07/2020.
+ * Created by Dhaval on 27/07/2020.
  */
 public class TSOrigins
 {

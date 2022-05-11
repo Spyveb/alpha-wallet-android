@@ -1,7 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by JB on 22/06/2020.
+ * Created by Dhaval on 22/06/2020.
  */
 public class UnableToResolveENS extends Exception
 {

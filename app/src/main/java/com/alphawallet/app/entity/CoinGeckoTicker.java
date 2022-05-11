@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by JB on 21/04/2021.
+ * Created by Dhaval on 21/04/2021.
  */
 public class CoinGeckoTicker
 {

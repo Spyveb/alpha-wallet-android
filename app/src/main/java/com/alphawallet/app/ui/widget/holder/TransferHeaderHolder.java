@@ -10,7 +10,7 @@ import com.alphawallet.app.R;
 import com.alphawallet.app.entity.tokens.Token;
 
 /**
- * Created by James on 13/02/2018.
+ * Created by Dhaval on 13/02/2018.
  */
 
 public class TransferHeaderHolder extends BinderViewHolder<Token> {

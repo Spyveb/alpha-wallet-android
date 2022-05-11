@@ -14,7 +14,7 @@ import io.realm.annotations.PrimaryKey;
 import static com.alphawallet.ethereum.EthereumNetworkBase.MAINNET_ID;
 
 /**
- * Created by JB on 17/08/2020.
+ * Created by Dhaval on 17/08/2020.
  */
 public class RealmTokenScriptData extends RealmObject
 {

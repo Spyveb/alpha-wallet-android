@@ -35,7 +35,7 @@ import java.math.BigInteger;
 import java.util.Map;
 
 /**
- * Created by JB on 17/12/2020.
+ * Created by Dhaval on 17/12/2020.
  */
 public class TransferHolder extends BinderViewHolder<TokenTransferData> implements View.OnClickListener
 {

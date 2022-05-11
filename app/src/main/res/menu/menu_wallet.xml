@@ -3,18 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     
     <item
-        android:id="@+id/action_scan"
-        android:icon="@drawable/ic_camera_scan"
+        android:id="@+id/action_activity"
+        android:icon="@drawable/ic_top_activity"
         android:orderInCategory="1"
         android:title="@string/action_scan_dapp"
-        app:iconTint="?colorControlNormal"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/action_scan"
+        android:icon="@drawable/ic_qr_code"
+        android:orderInCategory="1"
+        android:title="@string/action_scan_dapp"
+        app:showAsAction="always"
+        android:visible="true"/>
 
     <item
         android:id="@+id/action_my_wallet"
         android:icon="@drawable/ic_menu"
-        android:orderInCategory="20"
+        android:orderInCategory="1"
         android:title="@string/my_wallet_address"
-        app:iconTint="?colorControlNormal"
+        app:iconTint="@color/black"
         app:showAsAction="always" />
 </menu>

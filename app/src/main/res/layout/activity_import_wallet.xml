@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/back"
+    >
 
     <include layout="@layout/layout_simple_toolbar" />
 
@@ -19,9 +21,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            app:layout_scrollFlags="enterAlways" />
+            app:layout_scrollFlags="enterAlways"
+            app:tabPaddingEnd="40dp"
+            android:paddingBottom="5dp"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingStart="40dp"
+            app:tabPaddingTop="2dp"
+            app:tabPaddingBottom="2dp"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/white" />
 
-        <View style="@style/Aw.Component.Separator" />
+       <!-- <View style="@style/Aw.Component.Separator" />-->
 
     </LinearLayout>
 
@@ -29,5 +39,6 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/transparent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 </LinearLayout>

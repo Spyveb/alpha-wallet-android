@@ -4,7 +4,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    android:background="@drawable/ic_back_2"
+    >
 
     <include layout="@layout/layout_simple_toolbar" />
 
@@ -13,14 +15,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?android:attr/actionBarSize"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/ic_back_2"
+        >
 
-        <View style="@style/Aw.Component.Separator" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"/>
 
         <View style="@style/Aw.Component.Separator" />
 

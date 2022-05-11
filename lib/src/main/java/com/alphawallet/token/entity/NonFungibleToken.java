@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by weiwu on 1/3/18.  Each NonFungibleToken is a
+ * Created by Dhaval on 1/3/18.  Each NonFungibleToken is a
  * non-fungible token identified by a byte32 tokenID (other forms of
  * IDs may be added if tests proves that they can be more efficient).
  */

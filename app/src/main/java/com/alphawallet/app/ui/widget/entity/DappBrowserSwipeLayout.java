@@ -8,8 +8,7 @@ import android.view.MotionEvent;
 import static android.view.MotionEvent.*;
 
 /**
- * Created by James on 8/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 8/07/2019.
  *
  * This class overrides the SwipeRefreshLayout and makes the swipe refresh less sensitive.
  * To create a swipe refresh event user must make a quick, medium to large downward swipe of less than 300ms;

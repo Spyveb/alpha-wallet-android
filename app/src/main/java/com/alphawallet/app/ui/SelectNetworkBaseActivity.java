@@ -84,10 +84,10 @@ public abstract class SelectNetworkBaseActivity extends BaseActivity
         testnetRecyclerView = findViewById(R.id.test_list);
 
         mainnetRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mainnetRecyclerView.addItemDecoration(new ListDivider(this));
+       // mainnetRecyclerView.addItemDecoration(new ListDivider(this));
 
         testnetRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        testnetRecyclerView.addItemDecoration(new ListDivider(this));
+       // testnetRecyclerView.addItemDecoration(new ListDivider(this));
     }
 
     void hideSwitches()

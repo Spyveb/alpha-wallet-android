@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by JB on 10/09/2020.
+ * Created by Dhaval on 10/09/2020.
  */
 public class WCRequest implements Parcelable
 {

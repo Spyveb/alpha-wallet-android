@@ -4,7 +4,7 @@ import com.alphawallet.app.ui.widget.holder.RedeemTicketHolder;
 import com.alphawallet.app.entity.tokens.Token;
 
 /**
- * Created by James on 13/02/2018.
+ * Created by Dhaval on 13/02/2018.
  */
 
 public class RedeemHeaderSortedItem extends SortedItem<Token>

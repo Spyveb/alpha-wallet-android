@@ -8,8 +8,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 /**
- * Created by James on 26/03/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 26/03/2019.
  */
 public class AssetInstanceSortedItem extends SortedItem<TicketRange>
 {

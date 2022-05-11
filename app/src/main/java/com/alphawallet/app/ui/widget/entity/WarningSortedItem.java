@@ -3,8 +3,7 @@ package com.alphawallet.app.ui.widget.entity;
 import com.alphawallet.app.ui.widget.holder.WarningHolder;
 
 /**
- * Created by James on 18/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 18/07/2019.
  */
 public class WarningSortedItem extends SortedItem<WarningData> {
 

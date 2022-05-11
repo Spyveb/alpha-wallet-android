@@ -14,7 +14,7 @@ import com.alphawallet.app.repository.EthereumNetworkBase;
 import com.alphawallet.app.widget.StandardHeader;
 
 /**
- * Created by JB on 10/01/2022.
+ * Created by Dhaval on 10/01/2022.
  */
 public class ChainNameHeaderHolder extends BinderViewHolder<Long>
 {

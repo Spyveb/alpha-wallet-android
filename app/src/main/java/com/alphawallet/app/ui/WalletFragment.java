@@ -83,7 +83,7 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 
 /**
- * Created by justindeguzman on 2/28/18.
+ * Created by Dhaval on 2/28/18.
  */
 @AndroidEntryPoint
 public class WalletFragment extends BaseFragment implements
@@ -131,6 +131,7 @@ public class WalletFragment extends BaseFragment implements
         {
             toolbar(view);
         }
+
 
         initViews(view);
 
@@ -848,7 +849,14 @@ public class WalletFragment extends BaseFragment implements
         }
         if (menuItem.getItemId() == R.id.action_scan)
         {
-            viewModel.showQRCodeScanning(getActivity());
+           // viewModel.showQRCodeScanning(getActivity());
+            viewModel.showMyAddress2(getContext());
+        }
+
+        if (menuItem.getItemId() == R.id.action_activity)
+        {
+            Intent intent = new Intent(getContext(), ActivityPageActivity.class);
+            startActivity(intent);
         }
         return super.onMenuItemClick(menuItem);
     }

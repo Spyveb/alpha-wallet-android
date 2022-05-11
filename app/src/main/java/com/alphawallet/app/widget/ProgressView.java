@@ -1,7 +1,7 @@
 package com.alphawallet.app.widget;
 
 /**
- * Created by James on 6/02/2018.
+ * Created by Dhaval on 6/02/2018.
  */
 
 import android.content.Context;

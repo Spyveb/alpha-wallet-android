@@ -32,8 +32,7 @@ import static com.alphawallet.ethereum.EthereumNetworkBase.SOKOL_ID;
 import static com.alphawallet.ethereum.EthereumNetworkBase.XDAI_ID;
 
 /**
- * Created by James on 2/03/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 2/03/2019.
  */
 public class MagicLinkInfo
 {

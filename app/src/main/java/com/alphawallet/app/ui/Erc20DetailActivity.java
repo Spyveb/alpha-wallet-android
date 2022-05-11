@@ -196,8 +196,7 @@ public class Erc20DetailActivity extends BaseActivity implements StandardFunctio
 
     private void setupViewModel()
     {
-        if (viewModel == null)
-        {
+        if (viewModel == null) {
             viewModel = new ViewModelProvider(this)
                     .get(Erc20DetailViewModel.class);
             viewModel.newScriptFound().observe(this, this::onNewScript);

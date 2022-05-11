@@ -54,7 +54,6 @@ public class ActivityHistoryList extends LinearLayout
 
         recentTransactionsView = findViewById(R.id.list);
         recentTransactionsView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recentTransactionsView.addItemDecoration(new ListDivider(getContext()));
         loadingTransactions = findViewById(R.id.loading_transactions);
         noTxNotice = findViewById(R.id.layout_no_recent_transactions);
     }

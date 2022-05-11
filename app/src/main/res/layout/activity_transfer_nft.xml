@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/back">
 
     <include layout="@layout/layout_simple_toolbar" />
 
-    <View style="@style/Aw.Component.Separator" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -44,7 +44,6 @@
                 android:visibility="visible"
                 custom:ens="true"
                 custom:hint="@string/recipient"
-                custom:label="@string/recipient"
                 custom:show_header="true" />
 
             <View style="@style/Aw.Component.Separator" />
@@ -59,7 +58,7 @@
                 android:id="@+id/listTickets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background_bottom_border" />
+                android:background="@color/back" />
 
         </LinearLayout>
 

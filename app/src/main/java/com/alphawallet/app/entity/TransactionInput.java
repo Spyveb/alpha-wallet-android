@@ -29,7 +29,7 @@ import static com.alphawallet.app.entity.tokenscript.TokenscriptFunction.ZERO_AD
 import static com.alphawallet.app.ui.widget.holder.TransactionHolder.TRANSACTION_BALANCE_PRECISION;
 
 /**
- * Created by James on 4/03/2018.
+ * Created by Dhaval on 4/03/2018.
  *
  * A data structure that consists part of the transaction: it has the
  * parameters for a function call (currently, only transactions to a

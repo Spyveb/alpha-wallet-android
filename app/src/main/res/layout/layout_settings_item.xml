@@ -79,5 +79,7 @@
 
     <View
         style="@style/Aw.Component.Separator"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:layout_marginStart="@dimen/dp20"/>
 </RelativeLayout>

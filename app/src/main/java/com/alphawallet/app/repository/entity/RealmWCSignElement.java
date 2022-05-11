@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets;
 import io.realm.RealmObject;
 
 /**
- * Created by JB on 8/09/2020.
+ * Created by Dhaval on 8/09/2020.
  */
 public class RealmWCSignElement extends RealmObject
 {

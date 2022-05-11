@@ -27,8 +27,7 @@ import io.realm.annotations.PrimaryKey;
 import static com.alphawallet.app.repository.TokensRealmSource.EVENT_CARDS;
 
 /**
- * Created by James on 6/05/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 6/05/2019.
  */
 public class RealmAuxData extends RealmObject
 {

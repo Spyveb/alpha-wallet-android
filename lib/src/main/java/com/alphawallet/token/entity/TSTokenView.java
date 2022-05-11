@@ -10,7 +10,7 @@ import static org.w3c.dom.Node.TEXT_NODE;
 /**
  * Holds an individual Token View which consists of style and HTML view code
  *
- * Created by JB on 8/05/2020.
+ * Created by Dhaval on 8/05/2020.
  */
 public class TSTokenView
 {

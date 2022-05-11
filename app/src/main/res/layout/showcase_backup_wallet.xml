@@ -45,9 +45,12 @@
                 android:id="@+id/btn_close"
                 style="@style/Aw.Component.Button.Primary"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/dp10"
                 android:layout_marginBottom="@dimen/giant_40"
-                android:text="@string/action_close" />
+                android:text="@string/action_close"
+                android:background="@drawable/ic_btn"
+                app:backgroundTint="#44CEFF"/>
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

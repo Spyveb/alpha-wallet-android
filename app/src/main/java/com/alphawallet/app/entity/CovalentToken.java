@@ -1,7 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by JB on 20/05/2021.
+ * Created by Dhaval on 20/05/2021.
  */
 public class CovalentToken
 {

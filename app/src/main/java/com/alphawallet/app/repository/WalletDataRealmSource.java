@@ -26,8 +26,7 @@ import io.realm.Sort;
 import timber.log.Timber;
 
 /**
- * Created by James on 8/11/2018.
- * Stormbird in Singapore
+ * Created by Dhaval on 8/11/2018.
  */
 
 public class WalletDataRealmSource {

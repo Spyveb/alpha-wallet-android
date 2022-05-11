@@ -5,8 +5,7 @@ import com.alphawallet.token.tools.TokenDefinition;
 import java.math.BigInteger;
 
 /**
- * Created by James on 22/05/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 22/05/2019.
  */
 public interface AttributeInterface
 {

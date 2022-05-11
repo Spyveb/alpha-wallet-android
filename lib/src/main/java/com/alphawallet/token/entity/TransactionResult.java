@@ -3,8 +3,7 @@ package com.alphawallet.token.entity;
 import java.math.BigInteger;
 
 /**
- * Created by James on 7/05/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 7/05/2019.
  */
 public class TransactionResult
 {

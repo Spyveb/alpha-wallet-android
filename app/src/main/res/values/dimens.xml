@@ -46,7 +46,7 @@
     <dimen name="token_icon_large">86dp</dimen>
 
     <!-- Item Offset Decoration -->
-    <dimen name="grid_divider_offset">16dp</dimen>
+    <dimen name="grid_divider_offset">5dp</dimen>
     <dimen name="list_divider_offset">0dp</dimen>
 
     <!-- Standard Header -->
@@ -78,5 +78,9 @@
     <!-- Component Dimens -->
     <dimen name="dialog_corner_radius">4dp</dimen>
     <dimen name="action_sheet_header">60dp</dimen>
-
+    <!-- Dashboard -->
+    <dimen name="create_new_wallet_margin_bottom">25dp</dimen>
+    <dimen name="divider_margin_top">27dp</dimen>
+    <dimen name="already_label_margin_top">20dp</dimen>
+    <dimen name="bottom_buttons_holder_margin_bottom">25dp</dimen>
 </resources>

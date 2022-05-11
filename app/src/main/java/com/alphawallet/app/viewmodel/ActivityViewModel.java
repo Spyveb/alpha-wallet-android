@@ -24,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 import io.realm.Realm;
 
 /**
- * Created by JB on 26/06/2020.
+ * Created by Dhaval on 26/06/2020.
  */
 @HiltViewModel
 public class ActivityViewModel extends BaseViewModel

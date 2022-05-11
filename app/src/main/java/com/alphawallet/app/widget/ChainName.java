@@ -14,7 +14,7 @@ import com.alphawallet.app.R;
 import com.alphawallet.app.repository.EthereumNetworkBase;
 
 /**
- * Created by JB on 3/12/2020.
+ * Created by Dhaval on 3/12/2020.
  */
 public class ChainName extends LinearLayout
 {

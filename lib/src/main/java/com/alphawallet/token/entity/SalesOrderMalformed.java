@@ -1,7 +1,7 @@
 package com.alphawallet.token.entity;
 
 /**
- * Created by weiwu on 12/3/18.
+ * Created by Dhaval on 12/3/18.
  */
 
 public class SalesOrderMalformed extends Exception

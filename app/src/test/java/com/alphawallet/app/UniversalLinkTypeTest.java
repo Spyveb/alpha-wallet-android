@@ -17,8 +17,7 @@ import java.math.BigInteger;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by James on 9/02/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 9/02/2019.
  */
 public class UniversalLinkTypeTest
 {

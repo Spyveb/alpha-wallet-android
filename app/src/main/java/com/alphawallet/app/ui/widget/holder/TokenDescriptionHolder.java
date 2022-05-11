@@ -12,7 +12,7 @@ import com.alphawallet.app.entity.tokens.Token;
 import com.alphawallet.app.service.AssetDefinitionService;
 
 /**
- * Created by James on 12/02/2018.
+ * Created by Dhaval on 12/02/2018.
  */
 
 public class TokenDescriptionHolder extends BinderViewHolder<Token>

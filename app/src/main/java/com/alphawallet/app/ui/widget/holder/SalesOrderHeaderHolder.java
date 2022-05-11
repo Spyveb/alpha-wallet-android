@@ -11,7 +11,7 @@ import com.alphawallet.app.entity.tokens.Token;
 import com.alphawallet.app.service.AssetDefinitionService;
 
 /**
- * Created by James on 13/02/2018.
+ * Created by Dhaval on 13/02/2018.
  */
 
 public class SalesOrderHeaderHolder extends BinderViewHolder<Token> {

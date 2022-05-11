@@ -40,7 +40,7 @@ import io.realm.Realm;
 import io.realm.RealmQuery;
 
 /**
- * Created by JB on 19/11/2020.
+ * Created by Dhaval on 19/11/2020.
  */
 public class GasWidget extends LinearLayout implements Runnable, GasWidgetInterface
 {

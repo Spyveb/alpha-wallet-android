@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/back">
 
     <include layout="@layout/layout_simple_toolbar" />
 
@@ -16,7 +17,6 @@
         android:layout_marginBottom="15dp"
         custom:ens="false"
         custom:hint="@string/contract_address"
-        custom:label="@string/contract_address"
         custom:show_header="false" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -24,7 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/layout_progress_counter"
-        android:layout_below="@id/input_address_view" />
+        android:layout_below="@id/input_address_view"
+        android:background="@color/back"/>
 
     <LinearLayout
         android:id="@+id/layout_progress_counter"

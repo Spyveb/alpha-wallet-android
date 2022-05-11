@@ -1,7 +1,7 @@
 package com.alphawallet.app.interact;
 
 /**
- * Created by JB on 16/07/2020.
+ * Created by Dhaval on 16/07/2020.
  */
 public interface ActivityDataInteract
 {

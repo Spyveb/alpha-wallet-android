@@ -17,7 +17,7 @@ import com.alphawallet.app.widget.NFTImageView;
 import java.math.BigInteger;
 
 /**
- * Created by JB on 19/08/2021.
+ * Created by Dhaval on 19/08/2021.
  */
 public class NFTAssetHolder extends BinderViewHolder<Pair<BigInteger, NFTAsset>>
 {

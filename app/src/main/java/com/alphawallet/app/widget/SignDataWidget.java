@@ -15,7 +15,7 @@ import com.alphawallet.app.entity.ActionSheetInterface;
 import com.alphawallet.token.entity.Signable;
 
 /**
- * Created by JB on 8/01/2021.
+ * Created by Dhaval on 8/01/2021.
  */
 public class SignDataWidget extends LinearLayout
 {

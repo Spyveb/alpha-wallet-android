@@ -1,8 +1,7 @@
 package com.alphawallet.app.ui.widget.entity;
 
 /**
- * Created by James on 17/11/2018.
- * Stormbird in Singapore
+ * Created by Dhaval on 17/11/2018.
  */
 public interface ItemClickListener
 {

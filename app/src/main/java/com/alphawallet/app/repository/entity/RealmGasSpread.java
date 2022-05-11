@@ -11,7 +11,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by JB on 19/11/2020.
+ * Created by Dhaval on 19/11/2020.
  */
 public class RealmGasSpread extends RealmObject
 {

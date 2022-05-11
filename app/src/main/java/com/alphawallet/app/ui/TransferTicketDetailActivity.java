@@ -93,7 +93,7 @@ import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
 
 /**
- * Created by James on 21/02/2018.
+ * Created by Dhaval on 21/02/2018.
  */
 @AndroidEntryPoint
 public class TransferTicketDetailActivity extends BaseActivity

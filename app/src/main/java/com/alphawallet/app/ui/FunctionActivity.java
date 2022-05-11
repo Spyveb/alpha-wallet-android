@@ -78,8 +78,7 @@ import static com.alphawallet.app.entity.tokenscript.TokenscriptFunction.TOKENSC
 import static com.alphawallet.app.widget.AWalletAlertDialog.WARNING;
 
 /**
- * Created by James on 4/04/2019.
- * Stormbird in Singapore
+ *Created by Dhaval on 4/04/2019.
  */
 @AndroidEntryPoint
 public class FunctionActivity extends BaseActivity implements FunctionCallback,

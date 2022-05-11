@@ -15,7 +15,7 @@ import com.alphawallet.token.entity.*;
 import static com.alphawallet.token.entity.MagicLinkInfo.mainnetMagicLinkDomain;
 
 /**
- * Created by James on 21/02/2018.
+ * Created by Dhaval on 21/02/2018.
  */
 
 public class ParseMagicLink

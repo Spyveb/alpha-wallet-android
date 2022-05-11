@@ -5,8 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by James on 2/05/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 2/05/2019.
  */
 public class ContractInfo
 {

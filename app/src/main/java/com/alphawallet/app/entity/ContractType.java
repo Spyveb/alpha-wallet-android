@@ -1,8 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by James on 6/12/2018.
- * Stormbird in Singapore
+ * Created by Dhaval on 6/12/2018.
  */
 //NB: if you add to this list, place your new entry at the end of the list before 'CREATION' because the ordinal is used in storage
 

@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/back">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/back">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -24,13 +26,21 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
-            style="@style/Aw.Component.TabLayout.Fixed"
+            style="@style/Aw.Component.TabLayout.Scrollable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            app:layout_scrollFlags="enterAlways" />
+            app:layout_scrollFlags="enterAlways"
+            app:tabPaddingEnd="60dp"
+            android:paddingBottom="5dp"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingStart="60dp"
+            app:tabPaddingTop="2dp"
+            android:layout_marginTop="10dp"
+            app:tabPaddingBottom="2dp"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/white"/>
 
-        <View style="@style/Aw.Component.Separator" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

@@ -1,7 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by JB on 26/06/2020.
+ * Created by Dhaval on 26/06/2020.
  */
 public enum WalletPage
 {

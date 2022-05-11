@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 /**
- * Created by JB on 7/07/2020.
+ * Created by Dhaval on 7/07/2020.
  */
 public class EventSortedItem extends TimestampSortedItem<EventMeta>
 {

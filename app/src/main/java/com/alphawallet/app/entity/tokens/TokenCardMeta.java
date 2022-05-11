@@ -25,7 +25,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 /**
- * Created by JB on 12/07/2020.
+ * Created by Dhaval on 12/07/2020.
  */
 public class TokenCardMeta implements Comparable<TokenCardMeta>, Parcelable
 {

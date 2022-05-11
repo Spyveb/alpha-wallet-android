@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,8 +20,7 @@ import com.alphawallet.app.widget.InputAddress;
 import dagger.hilt.android.AndroidEntryPoint;
 
 /**
- * Created by James on 26/07/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 26/07/2019.
  */
 @AndroidEntryPoint
 public class SetWatchWalletFragment extends ImportFragment implements AddressReadyCallback
@@ -29,7 +29,7 @@ public class SetWatchWalletFragment extends ImportFragment implements AddressRea
     };
 
     private InputAddress watchAddress;
-    private Button importButton;
+    private RelativeLayout importButton;
     private OnSetWatchWalletListener onSetWatchWalletListener = dummyWatchWalletListener;
 
     public static SetWatchWalletFragment create()
@@ -58,7 +58,7 @@ public class SetWatchWalletFragment extends ImportFragment implements AddressRea
         View.inflate(getActivity(), R.layout.fragment_watch_wallet, null);
 
         watchAddress = getView().findViewById(R.id.input_watch_address);
-        importButton = getView().findViewById(R.id.import_action_ww);
+        importButton = getView().findViewById(R.id.rlCreateWallet);
         importButton.setOnClickListener(this);
         updateButtonState(false);
         watchAddress.setAddressCallback(this);

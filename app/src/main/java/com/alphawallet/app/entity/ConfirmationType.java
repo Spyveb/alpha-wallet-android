@@ -1,7 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by James on 19/02/2018.
+ * Created by Dhaval on 19/02/2018.
  */
 
 public enum ConfirmationType

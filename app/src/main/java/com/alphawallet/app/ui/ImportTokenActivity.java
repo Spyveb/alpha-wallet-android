@@ -57,7 +57,7 @@ import static com.alphawallet.token.tools.ParseMagicLink.spawnable;
 import dagger.hilt.android.AndroidEntryPoint;
 
 /**
- * Created by James on 9/03/2018.
+ * Created by Dhaval on 9/03/2018.
  */
 @AndroidEntryPoint
 public class ImportTokenActivity extends BaseActivity implements View.OnClickListener, SignAuthenticationCallback, PageReadyCallback

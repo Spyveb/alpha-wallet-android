@@ -207,12 +207,12 @@ public class PasswordInputView extends LinearLayout implements TextView.OnEditor
         if (resId == R.string.empty) {
             error.setText(resId);
             error.setVisibility(View.GONE);
-            editText.setBackgroundResource(R.drawable.background_password_entry);
+         //   editText.setBackgroundResource(R.drawable.background_password_entry);
             label.setTextColor(ContextCompat.getColor(getContext(), R.color.text_secondary));
         } else {
             error.setText(resId);
             error.setVisibility(View.VISIBLE);
-            editText.setBackgroundResource(R.drawable.background_password_error);
+         //   editText.setBackgroundResource(R.drawable.background_password_error);
             label.setTextColor(ContextCompat.getColor(getContext(), R.color.error));
         }
     }
@@ -230,17 +230,17 @@ public class PasswordInputView extends LinearLayout implements TextView.OnEditor
     public void setError(CharSequence message) {
         if (message == null) {
             error.setVisibility(View.GONE);
-            editText.setBackgroundResource(R.drawable.background_password_entry);
+           // editText.setBackgroundResource(R.drawable.background_password_entry);
             label.setTextColor(ContextCompat.getColor(getContext(), R.color.text_secondary));
         } else if (message.toString().isEmpty()) {
             error.setText(message);
             error.setVisibility(View.GONE);
-            editText.setBackgroundResource(R.drawable.background_password_entry);
+          //  editText.setBackgroundResource(R.drawable.background_password_entry);
             label.setTextColor(ContextCompat.getColor(getContext(), R.color.text_secondary));
         } else {
             error.setText(message);
             error.setVisibility(View.VISIBLE);
-            editText.setBackgroundResource(R.drawable.background_password_error);
+          //  editText.setBackgroundResource(R.drawable.background_password_error);
             label.setTextColor(ContextCompat.getColor(getContext(), R.color.error));
         }
     }
@@ -282,8 +282,8 @@ public class PasswordInputView extends LinearLayout implements TextView.OnEditor
 
     private void flashLayout()
     {
-        editText.setBackgroundResource(R.drawable.background_password_flash);
-        handler.postDelayed(() -> editText.setBackgroundResource(R.drawable.background_password_error), 300);
+        //editText.setBackgroundResource(R.drawable.background_password_flash);
+       // handler.postDelayed(() -> editText.setBackgroundResource(R.drawable.background_password_error), 300);
     }
 }
 

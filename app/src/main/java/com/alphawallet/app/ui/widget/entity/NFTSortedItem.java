@@ -9,7 +9,7 @@ import com.alphawallet.app.ui.widget.holder.NFTAssetHolder;
 import java.math.BigInteger;
 
 /**
- * Created by JB on 19/08/2021.
+ * Created by Dhaval on 19/08/2021.
  */
 public class NFTSortedItem extends SortedItem<Pair<BigInteger, NFTAsset>>
 {

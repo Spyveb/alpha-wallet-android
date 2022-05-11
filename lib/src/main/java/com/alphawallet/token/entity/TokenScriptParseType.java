@@ -1,8 +1,7 @@
 package com.alphawallet.token.entity;
 
 /**
- * Created by James on 29/04/2019.
- * Stormbird in Sydney
+ * Created by Dhaval on 29/04/2019.
  */
 public enum TokenScriptParseType
 {

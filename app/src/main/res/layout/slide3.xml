@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="88dp"
+        android:layout_height="93dp"
+        android:background="@drawable/ic_logo"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to \nReserve Wallet"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/sp28"
+        android:textSize="@dimen/dp24"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/inter_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start exploring the decentralized world."
+        android:textColor="@color/grey1"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/sp28"
+        android:textSize="14dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/inter_regular"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rlCreateWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_btn"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:text="Create a new wallet"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/ic_wallet_icon"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I already have a wallet"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/dp16"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/inter_semi_bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg_selected"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="Create a new wallet"
+            android:textColor="@color/button1"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/ic_back"
+            android:gravity="center_horizontal" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg_selected"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="Import my note"
+            android:textColor="@color/button1"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/ic_back"
+            android:gravity="center_horizontal" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Cryptocash >"
+        android:textColor="@color/text1"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp15"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/inter_semi_bold"/>
+</LinearLayout>

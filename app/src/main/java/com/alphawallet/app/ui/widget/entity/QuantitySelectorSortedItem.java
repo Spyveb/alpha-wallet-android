@@ -4,7 +4,7 @@ import com.alphawallet.app.ui.widget.holder.QuantitySelectorHolder;
 import com.alphawallet.app.entity.tokens.Token;
 
 /**
- * Created by James on 28/02/2018.
+ * Created by Dhaval on 28/02/2018.
  */
 
 public class QuantitySelectorSortedItem extends SortedItem<Token>

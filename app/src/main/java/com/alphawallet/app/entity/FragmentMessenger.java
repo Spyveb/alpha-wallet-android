@@ -1,8 +1,7 @@
 package com.alphawallet.app.entity;
 
 /**
- * Created by James on 1/02/2019.
- * Stormbird in Singapore
+ * Created by Dhaval on 1/02/2019.
  */
 public interface FragmentMessenger
 {

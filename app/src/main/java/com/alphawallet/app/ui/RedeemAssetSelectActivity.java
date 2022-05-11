@@ -35,7 +35,7 @@ import static com.alphawallet.app.C.Key.TICKET_RANGE;
 import dagger.hilt.android.AndroidEntryPoint;
 
 /**
- * Created by James on 27/02/2018.
+ * Created by Dhaval on 27/02/2018.
  */
 
 /**

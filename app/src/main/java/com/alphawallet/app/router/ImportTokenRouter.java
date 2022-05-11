@@ -7,7 +7,7 @@ import com.alphawallet.app.C;
 import com.alphawallet.app.ui.ImportTokenActivity;
 
 /**
- * Created by James on 9/03/2018.
+ * Created by Dhaval on 9/03/2018.
  */
 
 public class ImportTokenRouter

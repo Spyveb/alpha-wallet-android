@@ -42,7 +42,7 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/mini_4"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:src="@drawable/ic_launcher_new_foreground" />
 
     </RelativeLayout>
 

@@ -1,7 +1,7 @@
 package com.alphawallet.app.widget;
 
 /**
- * Created by JB on 12/01/2021.
+ * Created by Dhaval on 12/01/2021.
  */
 public enum ActionSheetMode
 {
